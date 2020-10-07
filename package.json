@@ -1,6 +1,6 @@
 {
 	"name": "paydude",
-	"homepage": "https://alitnp.github.io/paydude",
+	"homepage": ".",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
