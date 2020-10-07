@@ -1,0 +1,58 @@
+/* Promote */
+.promote {
+	box-sizing: border-box;
+	height: 150px;
+	background-color: #fff;
+	-webkit-boxshadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+	margin-bottom: 50px;
+	display: flex;
+}
+.promote img {
+	width: 50%;
+	padding: 1% 3%;
+	object-fit: contain;
+}
+.promote .promote-title {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	padding-right: 5%;
+}
+.promote .promote-title h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	white-space: wrap;
+}
+.promote .promote-title span {
+	font-size: 12px;
+}
+
+/* .promote Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* .promote Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.promote .promote-title {
+		padding-right: 10%;
+	}
+	.promote .promote-title h1 {
+		font-size: 26px;
+	}
+}
+
+/* .promote Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.promote .promote-title h1 {
+		font-size: 32px;
+	}
+}
+
+/* .promote Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

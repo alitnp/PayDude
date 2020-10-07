@@ -1,0 +1,129 @@
+/* feature-board */
+.feature-board {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	margin-top: 55px;
+}
+.feature-board .feature-card {
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	overflow: hidden;
+	color: var(--text-grey);
+}
+.feature-board .feature-card .card-title {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.feature-board .feature-card .card-title h3 {
+	margin-right: 10px;
+	white-space: nowrap;
+}
+.feature-board .feature-card .card-title img {
+	width: 72px;
+	box-sizing: border-box;
+}
+.feature-board .feature-card .card-list {
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-evenly;
+	background-color: var(--grey);
+	border-radius: 10px;
+	padding: 20px;
+	padding-right: 10%;
+}
+.feature-board .feature-card .card-list ul {
+	width: 40%;
+	list-style: none;
+	box-sizing: border-box;
+	direction: rtl;
+	text-align: right;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	font-size: 14px;
+	font-weight: bold;
+}
+.feature-board .feature-card .card-list ul li {
+	width: 100%;
+	overflow-wrap: normal;
+	white-space: nowrap;
+	text-align: right;
+	height: 25%;
+}
+.feature-board .feature-card .card-list ul li:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.feature-board .feature-card .card-list ul li::before {
+	content: "\2022";
+	color: var(--blue);
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 30px;
+	display: inline-block;
+	margin-left: 10%;
+	transform: translateY(10px);
+}
+
+/* .feature-board Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.feature-board {
+		width: 70%;
+	}
+}
+
+/* .feature-board Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* .feature-board Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.feature-board {
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 80%;
+	}
+	.feature-board .feature-card {
+		width: 48%;
+		height: 350px;
+		background-color: var(--grey);
+		border-radius: 10px;
+		padding-top: 15px;
+	}
+	.feature-board .feature-card .card-title {
+		flex-direction: column;
+		align-items: center;
+		margin: 0;
+		padding: 0;
+	}
+	.feature-board .feature-card .card-title h3 {
+		margin: 0;
+	}
+	.feature-board .feature-card .card-list {
+		padding: 0;
+		padding-right: 10%;
+		margin: 0;
+		height: 235px;
+	}
+	.feature-board .feature-card .card-list ul {
+		font-size: 16px;
+		margin: 0;
+	}
+}
+
+/* .feature-board Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

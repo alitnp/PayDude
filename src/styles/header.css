@@ -1,0 +1,237 @@
+/* Header */
+.header {
+	position: relative;
+	overflow: hidden;
+}
+/* Navigation Bar */
+.navbar {
+	z-index: 1;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	color: var(--text-white);
+	height: 60px;
+	padding: 0 5%;
+	font-size: 14px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.navbar .navaside {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+.navbar .navaside .nav-icon {
+	width: 18px;
+	margin: 0;
+}
+.navbar .navaside a {
+	color: var(--text-white);
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 0;
+}
+.navbar .navaside span {
+	display: none;
+	margin-left: 10px;
+	font-size: 14px;
+}
+.navbar ul {
+	display: none;
+	margin-right: 5%;
+}
+
+.navbar ul li a {
+	color: var(--text-white);
+	text-decoration: none;
+	font-size: 14px;
+	position: relative;
+}
+.navbar ul li a::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: -5px;
+	left: 0;
+	background-color: var(--text-white);
+	visibility: hidden;
+	transform: scaleX(0);
+	transition: all 0.3s ease-in-out 0s;
+}
+.navbar ul li a:hover::before {
+	visibility: visible;
+	transform: scaleX(1);
+}
+.navbar .logo {
+	color: var(--text-white);
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 0;
+	font-size: 24px;
+	font-weight: bold;
+}
+.navbar .logo img {
+	margin-left: 10px;
+}
+
+/* Slider */
+.slider {
+	box-sizing: border-box;
+	overflow: hidden;
+	z-index: 0;
+	position: relative;
+	height: 400px;
+	display: flex;
+	transition: all 0.8s;
+	align-items: flex-end;
+	color: var(--text-white);
+}
+
+.slider .slider-fader {
+	z-index: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		45deg,
+		rgba(255, 255, 255, 0.5) 0%,
+		rgba(255, 255, 255, 0) 100%
+	);
+}
+.slide-button {
+	z-index: 2;
+	transition: all 0.3s;
+	text-align: center;
+	line-height: 400px;
+}
+.slide-button:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+.middle-container {
+	height: 100%;
+	position: relative;
+	transition: all 0.8s;
+}
+
+.slide-middle {
+	position: absolute;
+	box-sizing: border-box;
+	z-index: 1;
+	height: 350px;
+	width: 100%;
+	display: flex;
+	overflow: visible;
+	flex-direction: column;
+	align-items: center;
+	bottom: 0;
+}
+.middle-container .slider-second {
+	left: 150%;
+}
+.middle-container .slider-third {
+	left: 300%;
+}
+.slide-middle .cards {
+	height: 50%;
+	width: 100%;
+	object-fit: scale-down;
+	transform: scale(1.3);
+}
+.slide-middle .slider-info {
+	height: 50%;
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+	width: 80%;
+}
+.slide-middle .slider-info .slider-title {
+	height: 50%;
+	text-align: right;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-basis: 100%;
+}
+.slide-middle .slider-info .slider-title img {
+	overflow: visible;
+	object-fit: scale-down;
+	width: 70px;
+}
+.slide-middle .slider-info .slider-title h1 {
+	font-size: 24px;
+	transform: translateY(-5px);
+}
+.slide-middle .slider-info .slider-text {
+	height: 50%;
+	font-size: 14px;
+	margin-right: 13px;
+	text-align: center;
+}
+
+/* .header Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* .header Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.navbar ul {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		list-style-type: none;
+	}
+
+	.slide-middle {
+		overflow: visible;
+		height: 100%;
+		width: 100%;
+		flex-direction: row-reverse;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	.slide-middle .slider-info {
+		flex-basis: auto;
+		width: 50%;
+		padding-right: 10%;
+	}
+	.slide-middle .slider-info .slider-title {
+		justify-content: flex-end;
+		height: 40%;
+	}
+	.slide-middle .slider-info .slider-text {
+		text-align: end;
+		max-width: 320px;
+	}
+	.slide-middle .cards {
+		overflow: visible;
+		flex-basis: auto;
+		width: 50%;
+		height: 100%;
+		transform: scale(1.2);
+	}
+	.navbar ul li {
+		margin-left: 5%;
+	}
+}
+
+/* .header Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.navbar .navaside span {
+		display: block;
+	}
+}
+
+/* .header Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
