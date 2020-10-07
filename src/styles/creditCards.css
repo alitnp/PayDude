@@ -42,7 +42,6 @@
 }
 .credit-cards .card-desc h1,
 h3 {
-	padding-right: 20px;
 }
 .credit-cards .card-desc h1 img {
 	width: 56px;
@@ -59,9 +58,42 @@ h3 {
 	direction: rtl;
 	margin-top: 15px;
 	width: 100%;
+	font-size: 14px;
+	padding-bottom: 20px;
 }
 .card-desc .specs {
+	position: relative;
 	background-color: var(--grey);
 	width: 100%;
 	border-radius: 12px;
+	padding: 30px;
+	padding-bottom: 45px;
+	overflow: hidden;
+	height: 200px;
+	transition: all 0.3s;
+	font-size: 12px;
+}
+.card-desc .expanded {
+	height: auto;
+}
+.card-desc .specs .expander {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	background: rgb(229, 229, 229);
+	background: linear-gradient(
+		rgba(229, 229, 229, 0.7) 0%,
+		rgba(229, 229, 229, 1) 100%
+	);
+	color: var(--blue);
+	font-size: 14px;
+}
+.card-desc .specs .expander:hover {
+	background: linear-gradient(
+		rgba(229, 229, 229, 0.4) 0%,
+		rgb(202, 201, 201) 100%
+	);
 }
