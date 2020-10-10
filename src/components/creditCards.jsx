@@ -3,11 +3,17 @@ import visacard from "../svgs/visa-colored.svg";
 import mastercard from "../svgs/master-colored.svg";
 import visagrey from "../svgs/visa-grey.svg";
 import mastergrey from "../svgs/master-grey.svg";
+import cardAblitie1 from "../svgs/card-ability-1.svg";
+import cardAblitie2 from "../svgs/card-ability-2.svg";
+import cardAblitie3 from "../svgs/card-ability-3.svg";
+import cardAblitie4 from "../svgs/card-ability-4.svg";
+import paymentPic from "../images/payment-pic.jpg";
 import "../styles/creditCards.css";
 
 class CreditCards extends Component {
 	state = {
 		selectedCard: "visa",
+		level: 1,
 		expanded: false,
 	};
 
@@ -15,10 +21,11 @@ class CreditCards extends Component {
 		this.setState({ selectedCard: card });
 	};
 	render() {
-		const { selectedCard, expanded } = this.state;
+		const { selectedCard, expanded, level } = this.state;
 		return (
 			<div className="credit-cards col-xs-12">
 				<div className="cards col-xs-12">
+					<span>انتخاب کارت :</span>
 					<div
 						className={`card-choice master ${
 							selectedCard === "visa" && "selected"
@@ -41,19 +48,91 @@ class CreditCards extends Component {
 					</div>
 				</div>
 				<div className="card-desc">
-					<h1>
-						ویزا کارت <img src={visagrey} alt="" />
-						<hr />
-					</h1>
-					<p>
-						از مشکلات مسافران ایرانی عازم به خارج از کشور حمل پول
-						نقد و نداشتن امکانی برای همراه بردن پول نقد بصورت کیف
-						الکترونیکی باشد. از طرفی دیگر آن گروه از افرادی که در
-						اینترنت و دنیای آنلاین به فعالیت می پردازند جهت انجام
-						کلیه پرداخت ها و خریدهای خود از سایت های خارجی نیاز به
-						داشتن ویزا کارت و مسترکارت دارند تا بتوانند عملیات
-						پرداخت آنلاین را بصورت مستقل انجام دهند. 
-					</p>
+					<div className="title">
+						<h1>
+							<img
+								src={
+									selectedCard === "visa"
+										? visagrey
+										: mastergrey
+								}
+								alt=""
+							/>
+							{selectedCard === "visa"
+								? "ویزا کارت"
+								: "مستر کارت"}
+							<hr />
+						</h1>
+						<p>
+							از مشکلات مسافران ایرانی عازم به خارج از کشور حمل
+							پول نقد و نداشتن امکانی برای همراه بردن پول نقد
+							بصورت کیف الکترونیکی باشد. از طرفی دیگر آن گروه از
+							افرادی که در اینترنت و دنیای آنلاین به فعالیت می
+							پردازند جهت انجام کلیه پرداخت ها و خریدهای خود از
+							سایت های خارجی نیاز به داشتن ویزا کارت و مسترکارت
+							دارند تا بتوانند عملیات پرداخت آنلاین را بصورت مستقل
+							انجام دهند.
+						</p>
+						<div className="table">
+							<table>
+								<tr>
+									<th>انتخاب نوع</th>
+									<th>
+										<button
+											className={level === 1 && "active"}
+											onClick={() => {
+												this.setState({ level: 1 });
+											}}>
+											نقره ای
+										</button>
+									</th>
+									<th>
+										<button
+											className={level === 2 && "active"}
+											onClick={() => {
+												this.setState({ level: 2 });
+											}}>
+											طلایی
+										</button>
+									</th>
+									<th>
+										<button
+											className={level === 3 && "active"}
+											onClick={() => {
+												this.setState({ level: 3 });
+											}}>
+											پلاتینیومی
+										</button>
+									</th>
+								</tr>
+								<tr>
+									<td>محدودیت برداشت نقدی </td>
+									<td>&#10004;</td>
+									<td>&#10004;</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td>محدودیت برداشت از POS</td>
+									<td>&#10004;</td>
+									<td>&#10004;</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td>سرویس های VIP ویزا</td>
+									<td>&#10004;</td>
+									<td>&#10004;</td>
+									<td>X</td>
+								</tr>
+								<tr>
+									<td>میزان وجه بلوکه شده زمان تحویل)</td>
+									<td>&#10004;</td>
+									<td>&#10004;</td>
+									<td>X</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
 					<div className={"specs " + (expanded && "expanded")}>
 						<h3>
 							مشخصات
@@ -88,25 +167,6 @@ class CreditCards extends Component {
 								قابلیت اتصال و وریفای حساب های پی پال، اسکریل،
 								اوکی پی و غیره
 							</li>
-							<li>
-								قابلیت استفاده در تمامی پایانه های فروشگاهی
-								(POS) خارج از کشور
-							</li>
-							<li>در چهار نوع، که در جدول زیر مقایسه شده.</li>
-							<li>
-								ارسال اس ام اس برای کلیه تراکنش ها به شماره
-								موبایل ایران
-							</li>
-							<li>صدور کارت بدون نیاز به سپرده اولیه </li>
-							<li>
-								دارای حساب بانکی به نام دارنده کارت که صاحب کارت
-								را مستقل از واسطه ها برای انتقال وجه می کند
-							</li>
-							<li>
-								صدور و تحویل کارت در ایران طی مدت زمان دو الی سه
-								هفته
-							</li>
-							<li>امکان کارت به کارت (بین کارتهای همان بانک)</li>
 						</ul>
 						<div
 							className="expander"
@@ -117,6 +177,38 @@ class CreditCards extends Component {
 						</div>
 					</div>
 				</div>
+				<div className="card-abilities">
+					<div className="ability">
+						<img src={cardAblitie1} alt="" />
+						<span>خرید اپلیکیشن ها و بازی های موبایل </span>
+					</div>
+					<div className="ability">
+						<img src={cardAblitie2} alt="" />
+						<span>
+							{`پرداخت آنلاین به کلیه سایت هایی که از درگاه ${
+								selectedCard === "visa"
+									? "ویزا کارت"
+									: "مستر کارت"
+							}
+							پشتیبانی می کنند`}
+						</span>
+					</div>
+					<div className="ability">
+						<img src={cardAblitie3} alt="" />
+						<span>
+							احراز هویت و اتصال به حساب های پی پال، سکریل، پیزا،
+							اوکی پی و غیره
+						</span>
+					</div>
+					<div className="ability">
+						<img src={cardAblitie4} alt="" />
+						<span>
+							خرید بلیط کلیه پروازهای خارجی ، قطارها و رزرو آنلاین
+							هتل
+						</span>
+					</div>
+				</div>
+				<div className="payment"></div>
 			</div>
 		);
 	}
