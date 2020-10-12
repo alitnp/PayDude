@@ -4,11 +4,31 @@
 			"id": "001",
 			"nameEn": "Visa",
 			"nameFa": "ویزا کارت",
-			"model": { "nameEn": "Silver", "nameFa": "نقره ای", "level": 1 },
+			"model": {
+				"nameEn": "Silver",
+				"nameFa": "نقره ای",
+				"level": 1,
+				"price": 150
+			},
 			"cardModels": {
-				"1": { "nameEn": "Silver", "nameFa": "نقره ای", "level": 1 },
-				"2": { "nameEn": "Golden", "nameFa": "طلایی", "level": 2 },
-				"3": { "nameEn": "Platinum", "nameFa": "پلاتینیوم", "level": 3 }
+				"1": {
+					"nameEn": "Silver",
+					"nameFa": "نقره ای",
+					"level": 1,
+					"price": 150
+				},
+				"2": {
+					"nameEn": "Golden",
+					"nameFa": "طلایی",
+					"level": 2,
+					"price": 250
+				},
+				"3": {
+					"nameEn": "Platinum",
+					"nameFa": "پلاتینیوم",
+					"level": 3,
+					"price": 350
+				}
 			},
 			"specs": [
 				"بدون سقف موجودی",
@@ -30,11 +50,31 @@
 			"id": "002",
 			"nameEn": "Master",
 			"nameFa": "مستر کارت",
-			"model": { "nameEn": "Silver", "nameFa": "نقره ای", "level": 1 },
+			"model": {
+				"nameEn": "Silver",
+				"nameFa": "نقره ای",
+				"level": 1,
+				"price": 350
+			},
 			"cardModels": {
-				"1": { "nameEn": "Silver", "nameFa": "نقره ای", "level": 1 },
-				"2": { "nameEn": "Golden", "nameFa": "طلایی", "level": 2 },
-				"3": { "nameEn": "Platinum", "nameFa": "پلاتینیوم", "level": 3 }
+				"1": {
+					"nameEn": "Silver",
+					"nameFa": "نقره ای",
+					"level": 1,
+					"price": 150
+				},
+				"2": {
+					"nameEn": "Golden",
+					"nameFa": "طلایی",
+					"level": 2,
+					"price": 250
+				},
+				"3": {
+					"nameEn": "Platinum",
+					"nameFa": "پلاتینیوم",
+					"level": 3,
+					"price": 350
+				}
 			},
 			"specs": [
 				"بدون سقف موجودی",

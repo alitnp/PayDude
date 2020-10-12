@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./mainPage.css";
+import "../styles/mainPage.css";
 import MainTitle from "./mainTitle.jsx";
 import FeatureBoard from "./featureBoard.jsx";
 import Article1 from "./article1.jsx";
