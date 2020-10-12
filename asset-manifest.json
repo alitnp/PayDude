@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.972e68b3.chunk.css",
+    "main.css": "./static/css/main.7e292163.chunk.css",
     "main.js": "./static/js/main.38420c56.chunk.js",
     "main.js.map": "./static/js/main.38420c56.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.d2cc313d.js",
@@ -8,9 +8,9 @@
     "static/js/2.13a7d557.chunk.js": "./static/js/2.13a7d557.chunk.js",
     "static/js/2.13a7d557.chunk.js.map": "./static/js/2.13a7d557.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.82aecc677a3989ede27ab44144bda6c4.js": "./precache-manifest.82aecc677a3989ede27ab44144bda6c4.js",
+    "precache-manifest.5ab17cfe1dc9055ef0df26f1a4670c2d.js": "./precache-manifest.5ab17cfe1dc9055ef0df26f1a4670c2d.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.972e68b3.chunk.css.map": "./static/css/main.972e68b3.chunk.css.map",
+    "static/css/main.7e292163.chunk.css.map": "./static/css/main.7e292163.chunk.css.map",
     "static/js/2.13a7d557.chunk.js.LICENSE.txt": "./static/js/2.13a7d557.chunk.js.LICENSE.txt",
     "static/media/Binance_logo.svg": "./static/media/Binance_logo.77e59adf.svg",
     "static/media/index.css": "./static/media/FontsFree-Net-ir_sans.0f5573de.ttf",
@@ -50,7 +50,7 @@
   "entrypoints": [
     "static/js/runtime-main.d2cc313d.js",
     "static/js/2.13a7d557.chunk.js",
-    "static/css/main.972e68b3.chunk.css",
+    "static/css/main.7e292163.chunk.css",
     "static/js/main.38420c56.chunk.js"
   ]
 }
