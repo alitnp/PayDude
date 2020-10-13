@@ -76,6 +76,7 @@ input::-webkit-inner-spin-button {
 	-moz-text-align-last: center;
 	border-radius: 5px;
 	color: var(--text-grey);
+	background-color: #fff;
 }
 .Online-pay-form .form-div select option {
 	text-align-last: center;
@@ -115,7 +116,7 @@ input::-webkit-inner-spin-button {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 	.Online-pay-form {
-		width: 50%;
+		width: 60%;
 	}
 }
 /* Large devices (laptops/desktops, 992px and up) */

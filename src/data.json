@@ -94,9 +94,15 @@
 		},
 		"OnlinePay": {
 			"id": "003",
-			"link": "",
-			"amount": "",
-			"userDesc": "",
+			"nameEn": "Online Pay",
+			"nameFa": "پرداخت آنلاین",
+			"model": {
+				"nameFa": "",
+				"orderLink": "",
+				"amount": "",
+				"currency": "USD",
+				"price": 0
+			},
 
 			"specs": [
 				"بدون سقف موجودی",

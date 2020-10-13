@@ -3,9 +3,11 @@ import MainTitle from "./mainTitle";
 import { texts } from "../data.json";
 import "../styles/onlinePay.css";
 import OnlinePayForm from "./onlinePayForm.jsx";
+import ClientOrder from "./clientOrder";
+import data from "../data.json";
 
 class OnlinePay extends Component {
-	state = {};
+	state = { product: data.products.OnlinePay };
 
 	componentDidMount() {
 		this.interval = setInterval(
@@ -45,6 +47,7 @@ class OnlinePay extends Component {
 		);
 	};
 	render() {
+		const { id, nameEn, nameFa, model } = this.state.product;
 		return (
 			<div className="online-pay">
 				<MainTitle text={texts.onlinePay} />
@@ -62,6 +65,7 @@ class OnlinePay extends Component {
 					{this.logoLoader()}
 				</div>
 				<OnlinePayForm />
+				<ClientOrder product={{ id, nameFa, nameEn, model }} />
 			</div>
 		);
 	}
