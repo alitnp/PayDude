@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "204353226f9fb2cc3ff4683905b018db",
+    "revision": "2707cbb2777f13f0bbee329d2eeaa118",
     "url": "./index.html"
   },
   {
-    "revision": "0a9362f90ad7eb39bd76",
-    "url": "./static/css/main.7e292163.chunk.css"
+    "revision": "8545472fd33df52e6b54",
+    "url": "./static/css/main.0e2160cf.chunk.css"
   },
   {
-    "revision": "dfae765034c53e11b90d",
-    "url": "./static/js/2.13a7d557.chunk.js"
+    "revision": "3a4c95b4085a63c5cdb6",
+    "url": "./static/js/2.380b48b0.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "./static/js/2.13a7d557.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.380b48b0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0a9362f90ad7eb39bd76",
-    "url": "./static/js/main.38420c56.chunk.js"
+    "revision": "8545472fd33df52e6b54",
+    "url": "./static/js/main.81a4fac5.chunk.js"
   },
   {
     "revision": "9483b9d32009400b82f7",
@@ -32,6 +32,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/FontsFree-Net-ir_sans.0f5573de.ttf"
   },
   {
+    "revision": "cfa9fd4fb698ac1f35a10f148e397689",
+    "url": "./static/media/airbnb.cfa9fd4f.svg"
+  },
+  {
+    "revision": "7fcd6c15c2568c3841f254fc8c5ffc26",
+    "url": "./static/media/apple.7fcd6c15.svg"
+  },
+  {
     "revision": "784997017f192ec254de9896d3b4d3bb",
     "url": "./static/media/arrow.78499701.svg"
   },
@@ -42,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0ec7d04511f4fed12b9783530850708d",
     "url": "./static/media/bill.0ec7d045.svg"
+  },
+  {
+    "revision": "5e307498854ac8cf24d24b3186fb957b",
+    "url": "./static/media/booking.5e307498.svg"
   },
   {
     "revision": "1e2158e4a11970b929759ed92852022f",
@@ -124,6 +136,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/master-grey.de787396.svg"
   },
   {
+    "revision": "09f039c2d25204fd4651ae792a6db5cf",
+    "url": "./static/media/netflix.09f039c2.svg"
+  },
+  {
     "revision": "6c04188e7ea0d3008c30adca0f09785a",
     "url": "./static/media/online-pay.6c04188e.svg"
   },
@@ -136,12 +152,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/payment-pic.15b70865.jpg"
   },
   {
+    "revision": "da5f24f536542d817469d487286ba60c",
+    "url": "./static/media/paypal.da5f24f5.svg"
+  },
+  {
+    "revision": "8808a040295e067028d2719e19a463d2",
+    "url": "./static/media/playstation.8808a040.svg"
+  },
+  {
     "revision": "0363af939efc024fe8ff4d45a7be54a7",
     "url": "./static/media/search.0363af93.svg"
   },
   {
     "revision": "493131ffe9e4e2ea3a041d02647dab46",
     "url": "./static/media/shopping-cart.493131ff.svg"
+  },
+  {
+    "revision": "fc0a319aab8a9e75fe65d7ca713d8cd7",
+    "url": "./static/media/spotify.fc0a319a.svg"
   },
   {
     "revision": "0c42f55c1c7f3d4a5140ebcc72bc5588",
@@ -166,5 +194,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "abc81fb9168c55df1be8ea0741143d3d",
     "url": "./static/media/wallet.abc81fb9.svg"
+  },
+  {
+    "revision": "1702d66cbff48f6be6e14f7d79c7115b",
+    "url": "./static/media/wow.1702d66c.svg"
+  },
+  {
+    "revision": "c00ad5b94562b8cf40ca372e50b7eedf",
+    "url": "./static/media/xbox.c00ad5b9.svg"
   }
 ]);
