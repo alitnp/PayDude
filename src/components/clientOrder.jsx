@@ -63,7 +63,7 @@ class clientOrder extends Component {
 					<div className="info-div">
 						<div className="desc cart">
 							<img src={shoppingCart} alt="" />
-							{`${nameFa} ${model.nameFa} ${model.price}$`}
+							{`${nameFa} ${model.nameFa}`}
 						</div>
 						<div className="desc">
 							<img className="dot" src={dot} alt="" />

@@ -8,13 +8,15 @@ import Article3 from "./article3.jsx";
 import Promote1 from "./promote1.jsx";
 import Promote2 from "./promote2.jsx";
 import Fade from "react-reveal/Fade";
+import {texts} from "../data.json";
 
 class MainPage extends Component {
 	state = {};
 	render() {
 		return (
 			<main className="main col-xs-12">
-				<MainTitle />
+				<MainTitle text={texts.mainPage}
+				/>
 				<FeatureBoard />
 				<Fade bottom>
 					<Article1 />

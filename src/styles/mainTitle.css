@@ -1,13 +1,14 @@
 /* main-title */
-.main .main-title {
+.main-title {
 	width: 90%;
 	margin: 0 auto;
+	text-align: center;
 }
-.main .main-title h1 {
+.main-title h1 {
 	margin-top: 70px;
 	font-size: 28px;
 }
-.main .main-title p {
+.main-title p {
 	font-size: 14px;
 }
 

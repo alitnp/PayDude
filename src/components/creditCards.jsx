@@ -70,7 +70,7 @@ class CreditCards extends Component {
 							<table>
 								<thead>
 									<tr>
-										<th>انتخاب نوع</th>
+										<th>انتخاب نوع کارت :</th>
 										<th>
 											<button
 												className={
@@ -170,13 +170,17 @@ class CreditCards extends Component {
 				<div className="ability-board">
 					<div className="ability">
 						<img src={abilit1} alt="" />
-						<span>خرید اپلیکیشن ها و بازی های موبایل </span>
+						<span>
+							خرید اپلیکیشن ها و بازی های موبایل و پرداخت های درون
+							برنامه ای
+						</span>
 					</div>
 					<div className="ability">
 						<img src={abilit2} alt="" />
 						<span>
 							پرداخت آنلاین به کلیه سایت هایی که از درگاه ویزا
-							پشتیبانی می کنند
+							پشتیبانی می کنند و برداشت پول نقد از دستگاه های خود
+							پرداز در سراسر دنیا
 						</span>
 					</div>
 					<div className="ability">
@@ -189,8 +193,8 @@ class CreditCards extends Component {
 					<div className="ability">
 						<img src={abilit4} alt="" />
 						<span>
-							خرید بلیط کلیه پروازهای خارجی ، قطارها و رزرو آنلاین
-							هتل
+							خرید بلیط کلیه پروازهای خارجی، قطارها و رزرو آنلاین
+							هتل، کنسرت و همایش ها
 						</span>
 					</div>
 				</div>

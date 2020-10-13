@@ -1,0 +1,14 @@
+{
+	"rates": {
+		"PKR": 167.0,
+		"GBP": 0.7994,
+		"EUR": 0.8863,
+		"USD": 1.0
+	},
+	"currencies": {
+		"USD": "United States Dollar",
+		"PKR": "Pakistani Rupee",
+		"GBP": "Great Britain Pound",
+		"EUR": "Euro"
+	}
+}
