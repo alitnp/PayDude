@@ -37,7 +37,7 @@ class CreditCards extends Component {
 					<div
 						className={`card-choice ${
 							nameEn === "Visa" && "selected"
-						}`}
+							}`}
 						onClick={() => {
 							this.hanleCardChange("Visa");
 						}}>
@@ -47,7 +47,7 @@ class CreditCards extends Component {
 					<div
 						className={`card-choice ${
 							nameEn === "Master" && "selected"
-						}`}
+							}`}
 						onClick={() => {
 							this.hanleCardChange("Master");
 						}}>
@@ -83,7 +83,7 @@ class CreditCards extends Component {
 														1
 													);
 												}}>
-												{cardModels[1].nameFa}
+												نقره ای
 											</button>
 										</th>
 										<th>
@@ -98,7 +98,7 @@ class CreditCards extends Component {
 														2
 													);
 												}}>
-												{cardModels[2].nameFa}
+												طلایی
 											</button>
 										</th>
 										<th>
@@ -113,7 +113,7 @@ class CreditCards extends Component {
 														3
 													);
 												}}>
-												{cardModels[3].nameFa}
+												پلاتینیومی
 											</button>
 										</th>
 									</tr>
@@ -198,7 +198,7 @@ class CreditCards extends Component {
 						</span>
 					</div>
 				</div>
-				<ClientOrder product={{ id, nameFa, nameEn, model }} />
+				<ClientOrder product={{ model }} />
 			</div>
 		);
 	}

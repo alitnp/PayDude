@@ -5,20 +5,31 @@ import "../styles/onlinePay.css";
 import OnlinePayForm from "./onlinePayForm.jsx";
 import ClientOrder from "./clientOrder";
 import data from "../data.json";
+import currencyList from "../rates.json";
 
 class OnlinePay extends Component {
-	state = { product: data.products.OnlinePay };
+	state = { orderDetail: data.products.OnlinePay };
 
 	componentDidMount() {
 		this.interval = setInterval(
-			() => this.setState({ time: Date.now() }),
+			() => { this.setState({ time: Date.now() }); },
 			5000
 		);
 	}
 	componentWillUnmount() {
 		clearInterval(this.interval);
 	}
+	handleChange = (formOrderDetail) => {
+		const orderDetail = this.state.orderDetail;
+		orderDetail.model = formOrderDetail;
+		const usdRate = (orderDetail.model.amount / currencyList.rates[orderDetail.model.currency]).toFixed(2);
+		orderDetail.model.price = usdRate;
+		this.setState({ orderDetail });
+		console.log(this.state);
+
+	}
 	logoLoader = () => {
+
 		const logos = [
 			<img src={require("../svgs/logos/airbnb.svg")} alt="" />,
 			<img src={require("../svgs/logos/apple.svg")} alt="" />,
@@ -30,6 +41,7 @@ class OnlinePay extends Component {
 			<img src={require("../svgs/logos/spotify.svg")} alt="" />,
 			<img src={require("../svgs/logos/xbox.svg")} alt="" />,
 		];
+
 		const chosenset = new Set();
 		while (chosenset.size < 6) {
 			chosenset.add(Math.floor(Math.random() * 9));
@@ -47,7 +59,6 @@ class OnlinePay extends Component {
 		);
 	};
 	render() {
-		const { id, nameEn, nameFa, model } = this.state.product;
 		return (
 			<div className="online-pay">
 				<MainTitle text={texts.onlinePay} />
@@ -64,8 +75,8 @@ class OnlinePay extends Component {
 					</div>
 					{this.logoLoader()}
 				</div>
-				<OnlinePayForm />
-				<ClientOrder product={{ id, nameFa, nameEn, model }} />
+				<OnlinePayForm onChange={this.handleChange} />
+				<ClientOrder product={this.state.orderDetail} />
 			</div>
 		);
 	}

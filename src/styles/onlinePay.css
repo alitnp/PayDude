@@ -43,31 +43,10 @@
 }
 
 .online-pay .description .logos img {
-	animation-name: logomove;
-	animation-duration: 5s;
-	animation-delay: 5s;
-	animation-iteration-count: infinite;
-	transform: translateY(30px);
 	width: 70%;
 	flex-grow: 0;
 	flex-shrink: 0;
 	object-fit: contain;
-}
-@keyframes logomove {
-	0% {
-		transform: translateY(30px);
-		opacity: 0;
-	}
-	20% {
-		opacity: 1;
-	}
-	25% {
-		transform: translateY(0px);
-	}
-	100% {
-		transform: translateY(0px);
-		opacity: 1;
-	}
 }
 /* Handling different width sizes */
 /* Any device smaller than 600px */

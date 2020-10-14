@@ -2,10 +2,16 @@
 	position: relative;
 	margin: 0 auto;
 	margin-bottom: 25px;
-	margin-top: 35px;
+	margin-top: 40px;
 	width: 100%;
 	overflow: hidden;
 	direction: rtl;
+	color: var(--text-black);
+	height: 600px;
+}
+.Online-pay-form p {
+	font-size: 14px;
+	margin-top: 10px;
 }
 .Online-pay-form form .form-div {
 	display: flex;
@@ -27,16 +33,19 @@
 	transform: translateY(-15px);
 	color: var(--text-black);
 	font-size: 10px;
+	
 }
 .Online-pay-form input:focus + label {
 	transform: translateY(-15px);
 	color: var(--text-black);
 	font-size: 10px;
+	height: unset;
 }
 .Online-pay-form .form-div .valued {
 	transform: translateY(-15px);
 	color: var(--text-green);
 	font-size: 10px;
+	height: unset;
 }
 .Online-pay-form .form-div input {
 	padding-bottom: 2px;
