@@ -1,20 +1,22 @@
 import React, { Component } from "react";
 import MainTitle from "./mainTitle";
-import { texts } from "../data.json";
-import "../styles/onlinePay.css";
 import OnlinePayForm from "./onlinePayForm.jsx";
 import ClientOrder from "./clientOrder";
 import data from "../data.json";
 import currencyList from "../rates.json";
+import { texts } from "../data.json";
+import "../styles/onlinePay.css";
 
 class OnlinePay extends Component {
 	state = { orderDetail: data.products.OnlinePay };
 
 	componentDidMount() {
+		window.scrollTo(0, 0);
 		this.interval = setInterval(
 			() => { this.setState({ time: Date.now() }); },
 			5000
 		);
+
 	}
 	componentWillUnmount() {
 		clearInterval(this.interval);
@@ -31,15 +33,15 @@ class OnlinePay extends Component {
 	logoLoader = () => {
 
 		const logos = [
-			<img src={require("../svgs/logos/airbnb.svg")} alt="" />,
-			<img src={require("../svgs/logos/apple.svg")} alt="" />,
-			<img src={require("../svgs/logos/booking.svg")} alt="" />,
-			<img src={require("../svgs/logos/netflix.svg")} alt="" />,
-			<img src={require("../svgs/logos/paypal.svg")} alt="" />,
-			<img src={require("../svgs/logos/playstation.svg")} alt="" />,
-			<img src={require("../svgs/logos/wow.svg")} alt="" />,
-			<img src={require("../svgs/logos/spotify.svg")} alt="" />,
-			<img src={require("../svgs/logos/xbox.svg")} alt="" />,
+			<img src={require("../svgs/logos/airbnb.svg")} key="0" alt="" />,
+			<img src={require("../svgs/logos/apple.svg")} key="1" alt="" />,
+			<img src={require("../svgs/logos/booking.svg")} key="2" alt="" />,
+			<img src={require("../svgs/logos/netflix.svg")} key="3" alt="" />,
+			<img src={require("../svgs/logos/paypal.svg")} key="4" alt="" />,
+			<img src={require("../svgs/logos/playstation.svg")} key="5" alt="" />,
+			<img src={require("../svgs/logos/wow.svg")} key="6" alt="" />,
+			<img src={require("../svgs/logos/spotify.svg")} key="7" alt="" />,
+			<img src={require("../svgs/logos/xbox.svg")} key="8" alt="" />,
 		];
 
 		const chosenset = new Set();
@@ -58,7 +60,9 @@ class OnlinePay extends Component {
 			</div>
 		);
 	};
+
 	render() {
+
 		return (
 			<div className="online-pay">
 				<MainTitle text={texts.onlinePay} />
@@ -75,6 +79,7 @@ class OnlinePay extends Component {
 					</div>
 					{this.logoLoader()}
 				</div>
+				<hr />
 				<OnlinePayForm onChange={this.handleChange} />
 				<ClientOrder product={this.state.orderDetail} />
 			</div>

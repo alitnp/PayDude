@@ -75,7 +75,7 @@ const featureBoard = () => {
 			<div className="feature-card ">
 				<div className="card-title">
 					<img src={cardlogo4} alt="" className=" " />
-					<h3>احراز هویت بین المللی</h3>
+					<Link to="/drivinglicense"><h3>احراز هویت بین المللی</h3></Link>
 				</div>
 				<div className="card-list">
 					<ul className="">

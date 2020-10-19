@@ -13,7 +13,9 @@ import data from "../data.json";
 
 class CreditCards extends Component {
 	state = { product: data.products.Visa, expanded: false };
-
+	componentDidMount() {
+		window.scrollTo(0, 0);
+	}
 	hanleCardChange = (cardName, cardModel = 1) => {
 		const selectedCard = data.products[cardName];
 		selectedCard.model = selectedCard.cardModels[cardModel];

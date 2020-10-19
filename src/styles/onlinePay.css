@@ -11,6 +11,7 @@
 	margin-top: 35px;
 	width: 100%;
 	display: flex;
+	align-items: center;
 	flex-wrap: wrap;
 }
 .online-pay .description p {
@@ -35,11 +36,11 @@
 	flex-basis: 100%;
 	display: grid;
 	grid-template-columns: auto auto auto;
-
 	row-gap: 25px;
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 35px;
+	height: 150px;
 }
 
 .online-pay .description .logos img {
@@ -47,6 +48,12 @@
 	flex-grow: 0;
 	flex-shrink: 0;
 	object-fit: contain;
+}
+.online-pay hr {
+	margin: 0 auto;
+	border: 1px solid var(--grey);
+	margin-top: 45px;
+	width: 80%;
 }
 /* Handling different width sizes */
 /* Any device smaller than 600px */
@@ -63,6 +70,7 @@
 		grid-template-columns: auto auto;
 		padding-right: 25px;
 		row-gap: 10%;
+		height: 300px;
 	}
 }
 /* Large devices (laptops/desktops, 992px and up) */

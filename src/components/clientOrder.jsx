@@ -16,6 +16,10 @@ class clientOrder extends Component {
 		account[e.target.name] = e.target.value;
 		this.setState({ account });
 	};
+	isValidURL(string) {
+		var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+		return (res !== null)
+	};
 	render() {
 		const { account } = this.state;
 		const { model } = this.props.product;
@@ -85,7 +89,6 @@ class clientOrder extends Component {
 						<img className="line" src={line} alt="" />
 						<button type="submit">
 							<span>پرداخت</span>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<span>{Math.ceil(model.price * currencyList.USDRLS)} تومان </span>
 						</button>
 					</div>
