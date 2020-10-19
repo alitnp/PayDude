@@ -5,5 +5,94 @@
 	direction: rtl;
 	text-align: right;
 	color: var(--text-black);
-	height: 500px;
+}
+.drivin-license .description {
+	margin: 0 auto;
+	margin-top: 35px;
+	font-size: 14px;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1200px;
+}
+.drivin-license .description .p-container {
+	flex-basis: 100%;
+}
+.drivin-license .description p {
+	margin-top: 15px;
+}
+.drivin-license .description .img-container {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-evenly;
+	flex-basis: 100%;
+	max-width: 600px;
+}
+.drivin-license .description .img-container img {
+	width: 40%;
+	margin-top: 80px;
+}
+.drivin-license .specs {
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 80px;
+	font-size: 12px;
+	max-width: 1200px;
+	border-radius: 10px;
+	background-color: rgb(250, 250, 250);
+	box-shadow: 0 5px 20px 0 var(--blue-shadow);
+}
+.drivin-license .specs .spec {
+	display: flex;
+	flex-direction: flex;
+	align-items: center;
+	width: 80%;
+	text-align: center;
+	direction: rtl;
+	padding: 0 20px;
+	margin-top: 35px;
+	border-bottom: 1px solid var(--grey);
+	padding-bottom: 20px;
+}
+.drivin-license .specs .spec:nth-child(3) {
+	border-bottom: none;
+}
+.drivin-license .specs .spec img {
+	margin-left: 35px;
+}
+.drivin-license .specs .spec p {
+	text-align: right;
+}
+.drivin-license .client-order {
+	margin-top: 35px;
+}
+/* Handling different width sizes */
+/* Any device smaller than 600px */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.drivin-license .specs {
+		flex-direction: row;
+		align-items: center;
+		padding: 20px;
+	}
+	.drivin-license .specs .spec {
+		border-bottom: none;
+		border-left: 1px solid var(--grey);
+		height: 150px;
+		margin-top: 0;
+		padding-top: 20px;
+	}
+	.drivin-license .specs .spec:nth-child(3) {
+		border-left: none;
+	}
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
