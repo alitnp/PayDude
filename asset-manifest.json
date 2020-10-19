@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.38ca8b53.chunk.css",
-    "main.js": "./static/js/main.1558d872.chunk.js",
-    "main.js.map": "./static/js/main.1558d872.chunk.js.map",
+    "main.css": "./static/css/main.4ffee34c.chunk.css",
+    "main.js": "./static/js/main.1128b95a.chunk.js",
+    "main.js.map": "./static/js/main.1128b95a.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.d2cc313d.js",
     "runtime-main.js.map": "./static/js/runtime-main.d2cc313d.js.map",
-    "static/js/2.aefeb5bb.chunk.js": "./static/js/2.aefeb5bb.chunk.js",
-    "static/js/2.aefeb5bb.chunk.js.map": "./static/js/2.aefeb5bb.chunk.js.map",
+    "static/js/2.a4b18873.chunk.js": "./static/js/2.a4b18873.chunk.js",
+    "static/js/2.a4b18873.chunk.js.map": "./static/js/2.a4b18873.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.a7cac64a304420c8d7ef62ae46723a38.js": "./precache-manifest.a7cac64a304420c8d7ef62ae46723a38.js",
+    "precache-manifest.5b5787f1aaffd366830462b4da94f842.js": "./precache-manifest.5b5787f1aaffd366830462b4da94f842.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.38ca8b53.chunk.css.map": "./static/css/main.38ca8b53.chunk.css.map",
-    "static/js/2.aefeb5bb.chunk.js.LICENSE.txt": "./static/js/2.aefeb5bb.chunk.js.LICENSE.txt",
+    "static/css/main.4ffee34c.chunk.css.map": "./static/css/main.4ffee34c.chunk.css.map",
+    "static/js/2.a4b18873.chunk.js.LICENSE.txt": "./static/js/2.a4b18873.chunk.js.LICENSE.txt",
     "static/media/Binance_logo.svg": "./static/media/Binance_logo.77e59adf.svg",
     "static/media/index.css": "./static/media/FontsFree-Net-ir_sans.0f5573de.ttf",
     "static/media/airbnb.svg": "./static/media/airbnb.cfa9fd4f.svg",
@@ -20,6 +20,7 @@
     "static/media/bar.svg": "./static/media/bar.834c4644.svg",
     "static/media/bill.svg": "./static/media/bill.0ec7d045.svg",
     "static/media/booking.svg": "./static/media/booking.5e307498.svg",
+    "static/media/calendar-check-grey.svg": "./static/media/calendar-check-grey.3d21c513.svg",
     "static/media/calendar-check.svg": "./static/media/calendar-check.1e2158e4.svg",
     "static/media/card-ability-1.svg": "./static/media/card-ability-1.349257d8.svg",
     "static/media/card-ability-2.svg": "./static/media/card-ability-2.a90f1bd1.svg",
@@ -32,8 +33,10 @@
     "static/media/cards.png": "./static/media/cards.82c0d885.png",
     "static/media/chevron-left.svg": "./static/media/chevron-left.d3ec9acf.svg",
     "static/media/chevron-right.svg": "./static/media/chevron-right.61b77437.svg",
+    "static/media/document-grey.svg": "./static/media/document-grey.27947960.svg",
     "static/media/dot.svg": "./static/media/dot.27eaef70.svg",
     "static/media/article.css": "./static/media/pay-credit.9ec2e4aa.jpg",
+    "static/media/driving-licence.png": "./static/media/driving-licence.11173f64.png",
     "static/media/facebook.svg": "./static/media/facebook.21bb305c.svg",
     "static/media/instagram.svg": "./static/media/instagram.b0518c46.svg",
     "static/media/line.svg": "./static/media/line.1ae3cb63.svg",
@@ -52,14 +55,15 @@
     "static/media/visa-colored.svg": "./static/media/visa-colored.68eacb9a.svg",
     "static/media/visa-grey.svg": "./static/media/visa-grey.dce69757.svg",
     "static/media/visa.svg": "./static/media/visa.d9d2ca60.svg",
+    "static/media/wallet-grey.svg": "./static/media/wallet-grey.9bdf1fc2.svg",
     "static/media/wallet.svg": "./static/media/wallet.abc81fb9.svg",
     "static/media/wow.svg": "./static/media/wow.1702d66c.svg",
     "static/media/xbox.svg": "./static/media/xbox.c00ad5b9.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d2cc313d.js",
-    "static/js/2.aefeb5bb.chunk.js",
-    "static/css/main.38ca8b53.chunk.css",
-    "static/js/main.1558d872.chunk.js"
+    "static/js/2.a4b18873.chunk.js",
+    "static/css/main.4ffee34c.chunk.css",
+    "static/js/main.1128b95a.chunk.js"
   ]
 }
