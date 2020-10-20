@@ -40,7 +40,6 @@
 	color: var(--text-black);
 	font-size: 10px;
 	height: unset;
-	
 }
 .Online-pay-form .form-div .valued {
 	transform: translateY(-15px);
@@ -60,7 +59,7 @@
 	-moz-appearance: textfield;
 }
 .Online-pay-form .form-div input[type="number"] {
-	width: 30%;
+	width: 50%;
 }
 .Online-pay-form .form-div input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

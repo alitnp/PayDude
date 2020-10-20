@@ -6,6 +6,7 @@ import Footer from "./components/footer.jsx";
 import Cards from "./components/creditCards.jsx";
 import OnlinePay from "./components/onlinePay.jsx";
 import DrivingLicense from "./components/drivingLicense.jsx";
+import BillAddress from './components/billAddress';
 
 class App extends Component {
 	state = {};
@@ -19,6 +20,7 @@ class App extends Component {
 					<Route path="/cards" component={Cards} />
 					<Route path="/onlinepay" component={OnlinePay} />
 					<Route path="/drivinglicense" component={DrivingLicense} />
+					<Route path="/billaddress" component={BillAddress} />
 				</Switch>
 
 				<Footer />
