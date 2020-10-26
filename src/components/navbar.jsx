@@ -8,20 +8,30 @@ import "../styles/navbar.css";
 import SideMenu from './sideMenu';
 
 class Navbar extends Component {
-    state = { sideMenu: "" }
+    state = {
+
+    }
     handleToggle = () => {
-        let sideMenu = this.state.sideMenu;
-        sideMenu === "" ? sideMenu = "closed" : sideMenu = "";
-        this.setState({ sideMenu });
+        const isToggled = this.state.toggled;
+        this.setState({ toggled: !isToggled });
+    }
+    componentDidMount() {
+        this.setState({ toggled: true, dashboard: this.props.dashboard });
+    }
+    componentDidUpdate(prevProps, prevState) {
+        if (this.props !== prevProps) {
+            this.setState({ dashboard: this.props.dashboard });
+        }
     }
     render() {
+
         return (<React.Fragment>
             <nav className="navbar col-xs-12">
                 <div className="navaside col-xs-5 col-m-3">
-                    <img alt="" src={bar} className="nav-icon hidden" onClick={this.handleToggle}></img>
-                    <img alt="" src={search} className="nav-icon"></img>
-                    <Link to="/dashboard">
-                        <img alt="" src={user} className="nav-icon"></img>
+                    <img alt="" src={bar} className="nav-icon hidden" onClick={this.handleToggle} />
+                    <img alt="" src={search} className="nav-icon" />
+                    <Link to="/dashboard" onClick={() => { this.setState({ toggled: true }) }}>
+                        <img alt="" src={user} className="nav-icon" />
                         <span>پنل شخصی</span>
                     </Link>
                 </div>
@@ -48,7 +58,7 @@ class Navbar extends Component {
                 </Link>
 
             </nav>
-            <SideMenu closed={this.state.right} />
+            <SideMenu toggled={this.state.toggled} dashboard={this.state.dashboard} onChange={this.handleToggle} />
         </React.Fragment>
         );
     }

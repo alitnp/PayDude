@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "../styles/header.css";
 import slideRight from "../svgs/chevron-right.svg";
 import slideLeft from "../svgs/chevron-left.svg";

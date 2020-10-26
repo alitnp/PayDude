@@ -8,7 +8,6 @@
 	flex-wrap: nowrap;
 	align-items: center;
 	justify-content: space-between;
-	z-index: 1;
 	padding: 0 5%;
 	height: 60px;
 	white-space: nowrap;
@@ -77,11 +76,14 @@
 	color: var(--text-white);
 	font-size: 24px;
 	font-weight: bold;
+	width: 150px;
 }
 .navbar .logo img {
 	margin-left: 10px;
 }
-
+.navbar .dashboard {
+	display: none;
+}
 /* .header Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 }
