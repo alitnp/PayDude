@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a4d7c4d96144c7392741e56c3712964c",
+    "revision": "f2b9d683550498d951e2510355fe5ed6",
     "url": "./index.html"
   },
   {
-    "revision": "ed3a78a15eef4649b2a0",
-    "url": "./static/css/main.4ffee34c.chunk.css"
+    "revision": "ff6a03266c831afea3e7",
+    "url": "./static/css/main.42f65bdb.chunk.css"
   },
   {
-    "revision": "496663c6660c5c2dfd15",
-    "url": "./static/js/2.a4b18873.chunk.js"
+    "revision": "3c3b1eb68de37681172f",
+    "url": "./static/js/2.fa02ecfc.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "./static/js/2.a4b18873.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.fa02ecfc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ed3a78a15eef4649b2a0",
-    "url": "./static/js/main.1128b95a.chunk.js"
+    "revision": "ff6a03266c831afea3e7",
+    "url": "./static/js/main.96754550.chunk.js"
   },
   {
     "revision": "9483b9d32009400b82f7",
@@ -26,10 +26,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "77e59adfa7310798746af7b03b0c24d9",
     "url": "./static/media/Binance_logo.77e59adf.svg"
-  },
-  {
-    "revision": "0f5573de75f1112d5cb5863eef1951fd",
-    "url": "./static/media/FontsFree-Net-ir_sans.0f5573de.ttf"
   },
   {
     "revision": "cfa9fd4fb698ac1f35a10f148e397689",
@@ -132,6 +128,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/instagram.b0518c46.svg"
   },
   {
+    "revision": "0f5573de75f1112d5cb5863eef1951fd",
+    "url": "./static/media/ir_sans.0f5573de.ttf"
+  },
+  {
+    "revision": "8332b596478a2e1816b652204293a984",
+    "url": "./static/media/ir_sans_b.8332b596.ttf"
+  },
+  {
     "revision": "1ae3cb6366eaeaa460817a550fa1d067",
     "url": "./static/media/line.1ae3cb63.svg"
   },
@@ -214,6 +218,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1702d66cbff48f6be6e14f7d79c7115b",
     "url": "./static/media/wow.1702d66c.svg"
+  },
+  {
+    "revision": "0735b7f9ae242a16256fdf1684eb3f94",
+    "url": "./static/media/x.0735b7f9.svg"
   },
   {
     "revision": "c00ad5b94562b8cf40ca372e50b7eedf",
