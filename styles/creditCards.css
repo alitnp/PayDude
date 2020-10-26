@@ -1,0 +1,244 @@
+/* credit-cards */
+.credit-cards {
+	display: flex;
+	flex-direction: column;
+	padding-right: 5%;
+	padding-left: 5%;
+	color: var(--text-black);
+}
+.credit-cards .cards {
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+	margin-top: 25px;
+	width: 100%;
+	height: 150px;
+}
+.credit-cards .cards span {
+	display: block;
+	flex-basis: 100%;
+	direction: rtl;
+}
+.credit-cards .cards .card-choice {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: var(--text-grey) 1px solid;
+	border-radius: 15px;
+	padding: 0 7px;
+	width: 150px;
+	height: 60px;
+}
+.credit-cards .cards .card-choice:hover {
+	background-color: #fff;
+}
+.credit-cards .cards .card-choice span {
+	width: 100%;
+	text-align: center;
+}
+.credit-cards .cards .card-choice img {
+	border-radius: 5px;
+	width: 56px;
+}
+.credit-cards .cards .selected {
+	border: var(--blue) 3px solid;
+	box-shadow: 0 5px 20px 0 var(--blue-shadow);
+	background-color: #fff;
+}
+.card-desc {
+	display: flex;
+	flex-direction: column;
+	margin-top: 35px;
+	width: 100%;
+	direction: rtl;
+}
+.card-desc .title {
+	padding-left: 15px;
+	width: 100%;
+}
+.credit-cards .card-desc h1 {
+	font-size: 24px;
+}
+.credit-cards .card-desc h1 img {
+	padding-left: 10px;
+	width: 56px;
+}
+.credit-cards .card-desc hr {
+	margin-top: 10px;
+	border: none;
+	border-top: var(--blue) 2px solid;
+	border-bottom: var(--blue) 2px solid;
+	border-radius: 5px;
+	background-color: var(--blue);
+	width: 200px;
+}
+.credit-cards .card-desc p {
+	margin-top: 15px;
+	padding-bottom: 20px;
+	width: 100%;
+	max-width: 500px;
+	direction: rtl;
+	text-align: justify;
+	font-size: 12px;
+}
+.card-desc .title .table table {
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+	font-size: 12px;
+}
+.card-desc .title .table table button {
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	background-color: var(--grey);
+	cursor: pointer;
+	width: 100%;
+	height: 35px;
+	color: var(--text-grey);
+}
+.card-desc .title .table .active {
+	box-shadow: 0 5px 20px 0 var(--blue-shadow);
+	background-color: var(--blue);
+	color: var(--text-white);
+}
+.card-desc .title .table table tr {
+	height: 50px;
+}
+.card-desc .title .table table tr:nth-child(even) {
+	background-color: var(--grey);
+}
+.card-desc .title .table table td,
+th {
+	border-left: solid 1px var(--blue);
+	padding: 0 5px;
+	text-align: center;
+}
+.card-desc .title .table table td:last-child,
+th:last-child {
+	border: none;
+}
+.card-desc .specs {
+	position: relative;
+	transition: all 0.3s;
+	margin-top: 35px;
+	border-radius: 12px;
+	background-color: var(--grey);
+	padding: 20px;
+	padding-right: 35px;
+	padding-bottom: 45px;
+	width: 100%;
+	max-width: 500px;
+	height: 200px;
+	overflow: hidden;
+	font-size: 10px;
+}
+.card-desc .specs hr {
+	width: 75px;
+}
+.card-desc .specs ul {
+	margin-top: 15px;
+}
+.card-desc .specs ul li {
+	margin-top: 5px;
+}
+.card-desc .expanded {
+	height: auto;
+}
+.card-desc .specs .expander {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(
+		rgba(229, 229, 229, 0.7) 0%,
+		rgba(229, 229, 229, 1) 100%
+	);
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	color: var(--blue);
+	font-size: 14px;
+}
+.card-desc .specs .expander:hover {
+	background: linear-gradient(
+		rgba(229, 229, 229, 0.4) 0%,
+		rgb(202, 201, 201) 100%
+	);
+}
+.credit-cards .ability-board {
+	float: right;
+	padding: 5%;
+	width: 100%;
+	direction: rtl;
+	color: var(--text-greyer);
+}
+.credit-cards .ability {
+	display: flex;
+	align-items: center;
+	margin-top: 30px;
+	width: 100%;
+}
+.credit-cards .ability img {
+	flex-shrink: 0;
+	flex-grow: 0;
+	margin-left: 25px;
+	width: 45px;
+}
+.credit-cards .ability span {
+	padding-left: 10px;
+	font-size: 14px;
+}
+/* Handling different width sizes */
+/* Any device smaller than 600px */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.credit-cards .cards {
+		justify-content: flex-start;
+	}
+	.credit-cards .cards .card-choice {
+		margin-left: 5%;
+		width: 45%;
+		max-width: 250px;
+	}
+	.credit-cards .cards .card-choice img {
+		width: auto;
+		height: 80%;
+	}
+	.card-desc {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.card-desc .specs {
+		padding-bottom: 20px;
+		width: 60%;
+		height: fit-content;
+	}
+	.card-desc .expander {
+		display: none;
+	}
+	.credit-cards .ability-board {
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+	.credit-cards .ability img {
+		margin-left: 10px;
+	}
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.credit-cards .ability img {
+		margin-left: 25px;
+	}
+	.credit-cards .ability span {
+		padding-left: 15px;
+		font-size: 16px;
+	}
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/mainTitle.css";
 
+
 const mainTitle = ({ text }) => {
 	return (
 		<div className="main-title">

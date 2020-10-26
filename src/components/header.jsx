@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../styles/header.css";
-import logo from "../svgs/logo.svg";
-import user from "../svgs/user.svg";
-import search from "../svgs/search.svg";
-import bar from "../svgs/bar.svg";
 import slideRight from "../svgs/chevron-right.svg";
 import slideLeft from "../svgs/chevron-left.svg";
 import visaIcon from "../svgs/visa.svg";
@@ -16,55 +12,35 @@ class Header extends Component {
 		colors: ["var(--blue)", "rgb(226, 124, 76)", " var(--text-green)"],
 		bgcolor: "var(--blue)",
 	};
-	constructor() {
-		super();
-		setInterval(() => {
+
+	interval;
+
+	componentDidMount() {
+		this.interval = setInterval(() => {
 			this.handleSlide(150);
 		}, 8000);
 	}
+	componentWillUnmount() {
+		clearInterval(this.interval);
+	}
+
 	handleSlide = (add) => {
+		clearInterval(this.interval);
 		let x = this.state.xposition;
 		x += add;
-		if (x < -300) x = 0;
-		if (x > 0) x = -300;
+		(x < -300) && (x = 0);
+		(x > 0) && (x = -300);
 		this.setState({
 			xposition: x,
 			bgcolor: this.state.colors[(x / 150) * -1],
 		});
+		this.interval = setInterval(() => {
+			this.handleSlide(150);
+		}, 8000);
 	};
 	render() {
 		return (
-			<header>
-				<nav className="navbar col-xs-12">
-					<div className="navaside col-xs-5 col-m-3">
-						<img alt="" src={bar} className="nav-icon"></img>
-						<img alt="" src={search} className="nav-icon"></img>
-						<a href="/#">
-							<img alt="" src={user} className="nav-icon"></img>
-							<span>پنل شخصی</span>
-						</a>
-					</div>
-
-					<ul className="col-xs-3 col-m-7 col-l-8">
-						<li>
-							<a href="/#">خانه</a>
-						</li>
-
-						<li>
-							<a href="/#">حساب بین المللی</a>
-						</li>
-						<li>
-							<a href="/#">پرداخت آنلاین</a>
-						</li>
-						<li>
-							<a href="/#">احراز هویت</a>
-						</li>
-					</ul>
-					<Link to="/" className="logo col-xs-4 col-m-2 col-l-1">
-						پیدود
-						<img alt="" src={logo}></img>
-					</Link>
-				</nav>
+			<header className="header">
 				<div
 					className="slider col-xs-12"
 					style={{ background: `${this.state.bgcolor}` }}>

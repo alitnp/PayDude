@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Footer from "./footer.jsx";
+import Header from "./header.jsx";
 import MainTitle from './mainTitle.jsx';
 import DocumentUploader from './documentUploader.jsx';
 import ClientOrder from "./clientOrder";
@@ -19,41 +21,47 @@ class DrivingLicense extends Component {
     }
     render() {
         return (
-            <div className="drivin-license">
-                <MainTitle text={texts.drivingLicense} />
-                <div className="description">
-                    <p>{texts.drivingLicense.desc1}</p>
-                    <p>{texts.drivingLicense.desc2}</p>
-                    <div className="p-container">
+            <React.Fragment>
+                <Header/>
+                <div className="drivin-license">
+                    <MainTitle text={texts.drivingLicense} />
+                    <div className="description">
+                        <p>{texts.drivingLicense.desc1}</p>
+                        <p>{texts.drivingLicense.desc2}</p>
+                        <div className="p-container">
 
 
-                        <p>{texts.drivingLicense.desc3}</p>
+                            <p>{texts.drivingLicense.desc3}</p>
+                        </div>
+                        <div className="img-container">
+                            <img src={licenseImage} alt="" />
+                            <img src={licenseImage} alt="" />
+                        </div>
                     </div>
-                    <div className="img-container">
-                        <img src={licenseImage} alt="" />
-                        <img src={licenseImage} alt="" />
+                    <div className="specs">
+                        <div className="spec"><img src={calenderCheck} alt="" />
+
+                            <p><span>زمان تحویل: </span>
+                                {data.texts.drivingLicense.specs[0]}
+                            </p>
+                        </div>
+                        <div className="spec"><img src={wallet} alt="" />
+                            <p><span>هزینه صدور و ارسال:  </span>
+                                {data.texts.drivingLicense.specs[1]}
+                            </p>
+                        </div>
+                        <div className="spec"><img src={document} alt="" />
+                            <p><span>مدارک لازم:  </span>
+                                {data.texts.drivingLicense.specs[2]}
+                            </p>
+                        </div>
                     </div>
+                    <DocumentUploader />
+                    <ClientOrder className="client-order" product={data.products.DrivingLicense} />
                 </div>
-                <div className="specs">
-                    <div className="spec"><img src={calenderCheck} alt="" />
-                        <p>
-                            {data.texts.drivingLicense.specs[0]}
-                        </p>
-                    </div>
-                    <div className="spec"><img src={wallet} alt="" />
-                        <p>
-                            {data.texts.drivingLicense.specs[1]}
-                        </p>
-                    </div>
-                    <div className="spec"><img src={document} alt="" />
-                        <p>
-                            {data.texts.drivingLicense.specs[2]}
-                        </p>
-                    </div>
-                </div>
-                <DocumentUploader />
-                <ClientOrder className="client-order" product={data.products.DrivingLicense} />
-            </div>
+                <Footer/>
+            </React.Fragment>
+
         );
     }
 }

@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Footer from "./footer.jsx";
+import Header from "./header.jsx";
 import ClientOrder from "./clientOrder.jsx";
 import visacard from "../svgs/visa-colored.svg";
 import mastercard from "../svgs/master-colored.svg";
@@ -33,7 +35,9 @@ class CreditCards extends Component {
 		} = this.state.product;
 		const { expanded } = this.state;
 		return (
-			<div className="credit-cards col-xs-12">
+			<React.Fragment>
+				<Header/>
+					<div className="credit-cards col-xs-12">
 				<div className="cards col-xs-12">
 					<span>انتخاب کارت :</span>
 					<div
@@ -202,6 +206,9 @@ class CreditCards extends Component {
 				</div>
 				<ClientOrder product={{ model }} />
 			</div>
+			<Footer/>
+			</React.Fragment>
+		
 		);
 	}
 }

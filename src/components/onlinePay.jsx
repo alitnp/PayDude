@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Footer from "./footer.jsx";
+import Header from "./header.jsx";
 import MainTitle from "./mainTitle";
 import OnlinePayForm from "./onlinePayForm.jsx";
 import ClientOrder from "./clientOrder";
@@ -64,6 +66,8 @@ class OnlinePay extends Component {
 	render() {
 
 		return (
+			<React.Fragment>
+				<Header/>
 			<div className="online-pay">
 				<MainTitle text={texts.onlinePay} />
 
@@ -83,6 +87,9 @@ class OnlinePay extends Component {
 				<OnlinePayForm onChange={this.handleChange} />
 				<ClientOrder product={this.state.orderDetail} />
 			</div>
+			<Footer/>
+			</React.Fragment>
+
 		);
 	}
 }
