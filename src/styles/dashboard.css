@@ -1,12 +1,165 @@
 .dashboard {
 	position: relative;
 	width: 100%;
-	height: 100vh;
 	background-color: var(--bg-grey);
 	z-index: 1;
+	padding-bottom: 20px;
 }
 .dashboard .navbar {
+	position: relative;
+	display: block;
 	width: 100%;
 	height: 60px;
 	background-color: var(--blue);
+}
+
+.dashboard .main-wrapper {
+	background-color: var(--text-white);
+	width: 95%;
+	margin: 15px auto;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.226);
+	border-radius: 15px;
+	direction: rtl;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 15px;
+}
+
+.dashboard .main-wrapper .sidebar {
+	direction: rtl;
+	width: 100%;
+	height: 60px;
+	padding-top: 20px;
+}
+.dashboard .main-wrapper .sidebar ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	max-width: 600px;
+	margin: 0 auto;
+}
+.dashboard .main-wrapper .sidebar li {
+	margin-bottom: 20px;
+	position: relative;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.dashboard .main-wrapper .sidebar li::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: var(--blue);
+	bottom: -5px;
+	right: 0;
+	transition: all 0.3s;
+	transform: scale(0);
+}
+.dashboard .main-wrapper .sidebar li:hover::before {
+	transform: scale(1);
+}
+
+.dashboard .main-wrapper .sidebar .selected::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: var(--blue);
+	bottom: -5px;
+	right: 0;
+	transition: all 0.3s;
+	transform: scale(1);
+}
+.dashboard .main {
+	width: 100%;
+	height: 100%;
+	padding: 0 5px;
+}
+.dashboard .main .dash-title {
+	font-weight: bold;
+	margin-right: 15px;
+}
+.dashboard .main .dashboard-content {
+	width: 100%;
+	margin-top: 15px;
+}
+.dashboard .main .dashboard-content .card {
+	width: 100%;
+	max-width: 400px;
+	height: 180px;
+	border-radius: 10px;
+	background-color: #fff;
+	border: 1px solid var(--blue);
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 45px;
+	margin-bottom: 25px;
+	position: relative;
+}
+.dashboard .main .dashboard-content .card small {
+	font-size: 14px;
+	position: absolute;
+	top: -30px;
+	right: 15px;
+}
+.dashboard .main .dashboard-content .profile-card .pic {
+	height: 150px;
+	padding: 20px;
+	flex-basis: 40%;
+}
+.dashboard .main .dashboard-content .profile-card .pic img {
+	width: 100%;
+	max-width: 150px;
+	border-radius: 10px;
+}
+.dashboard .main .dashboard-content .profile-card .info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	font-size: 12px;
+	flex-basis: 60%;
+}
+.dashboard .main .dashboard-content .table-card {
+	max-width: unset;
+}
+.dashboard .main .dashboard-content .table-card div {
+	width: 100%;
+	height: 100%;
+	overflow-x: auto;
+	overflow-y: auto;
+	position: relative;
+}
+.dashboard .main .dashboard-content .table-card table {
+	table-layout: auto;
+	width: 100%;
+	height: 100%;
+	min-width: 500px;
+	border-collapse: collapse;
+	font-size: 12px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.dashboard .main .dashboard-content .table-card table tr {
+	height: 50px;
+}
+.dashboard .main .dashboard-content .table-card table tr:nth-child(even) {
+	background-color: var(--grey);
+}
+.dashboard .main .dashboard-content .table-card table td {
+	border-left: solid 1px var(--blue);
+	padding: 0 5px;
+	text-align: center;
+	width: 250px;
+}
+.dashboard .main .dashboard-content .table-card table th {
+	border-left: solid 1px var(--blue);
+	padding: 0 5px;
+	text-align: center;
+}
+.dashboard .main .dashboard-content .table-card table td:last-child {
+	border: none;
+}
+.dashboard .main .dashboard-content .table-card table th:last-child {
+	border: none;
 }

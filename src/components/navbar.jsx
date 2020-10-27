@@ -9,28 +9,30 @@ import SideMenu from './sideMenu';
 
 class Navbar extends Component {
     state = {
-
+        toggled: true
     }
     handleToggle = () => {
         const isToggled = this.state.toggled;
         this.setState({ toggled: !isToggled });
     }
     componentDidMount() {
-        this.setState({ toggled: true, dashboard: this.props.dashboard });
+        this.setState({ toggled: true });
     }
     componentDidUpdate(prevProps, prevState) {
         if (this.props !== prevProps) {
-            this.setState({ dashboard: this.props.dashboard });
+            this.setState({ toggled: true });
+
         }
     }
     render() {
 
         return (<React.Fragment>
+
             <nav className="navbar col-xs-12">
                 <div className="navaside col-xs-5 col-m-3">
                     <img alt="" src={bar} className="nav-icon hidden" onClick={this.handleToggle} />
                     <img alt="" src={search} className="nav-icon" />
-                    <Link to="/dashboard" onClick={() => { this.setState({ toggled: true }) }}>
+                    <Link to="/dashboard">
                         <img alt="" src={user} className="nav-icon" />
                         <span>پنل شخصی</span>
                     </Link>
@@ -63,5 +65,7 @@ class Navbar extends Component {
         );
     }
 }
-
+Navbar.defaultProps = {
+    toggled: true
+}
 export default Navbar;

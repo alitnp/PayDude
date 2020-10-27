@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Navbar from "./navbar.jsx";
 import Footer from "./footer.jsx";
 import Header from "./header.jsx";
 import MainTitle from "./mainTitle"
@@ -13,6 +14,7 @@ class BillAddress extends Component {
     render() {
         return (
             <React.Fragment>
+                <Navbar toggled={true} />
                 <Header />
                 <div className="bill-address">
                     <MainTitle text={data.texts.billAddress} />

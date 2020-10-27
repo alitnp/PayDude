@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Navbar from "./navbar.jsx";
 import Footer from "./footer.jsx";
 import Header from "./header.jsx";
 import ClientOrder from "./clientOrder.jsx";
@@ -34,6 +35,7 @@ class CreditCards extends Component {
 		const { expanded } = this.state;
 		return (
 			<React.Fragment>
+				<Navbar toggled={true} />
 				<Header />
 				<div className="credit-cards col-xs-12">
 					<div className="cards col-xs-12">

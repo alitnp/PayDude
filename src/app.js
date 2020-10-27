@@ -12,7 +12,7 @@ class App extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<Navbar />
+				
 				<Switch>
 					<Route path="/" exact component={MainPage} />
 					<Route path="/cards" component={CreditCards} />

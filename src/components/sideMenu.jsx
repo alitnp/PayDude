@@ -9,13 +9,13 @@ class SideMenu extends Component {
         toggled: true
     };
     componentDidMount() {
-        const toggled = this.props.dashboard ? false : this.props.toggled;;
-        this.setState({ toggled, dashboard: this.props.dashboard });
+        const toggled = this.props.toggled;;
+        this.setState({ toggled });
     }
     componentDidUpdate(prevProps, prevState) {
         if (this.props !== prevProps) {
-            let toggled = this.props.dashboard ? false : this.props.toggled;
-            this.setState({ toggled, dashboard: this.props.dashboard });
+            let toggled = this.props.toggled;
+            this.setState({ toggled });
         }
     }
     handleToggle = () => {
@@ -31,13 +31,6 @@ class SideMenu extends Component {
                 </Link>
 
                 <ul>
-                    {this.state.dashboard && (
-                        <div>
-                            <li>asd</li>
-                            <li>assdfsfdd</li>
-                            <li>asd</li>
-                        </div>
-                    )}
                     <li>
                         <a href="/#">حساب بین المللی</a>
                     </li>
@@ -51,7 +44,7 @@ class SideMenu extends Component {
                         <a href="/#">خدمات</a>
                     </li>
                 </ul>
-                {!this.state.dashboard && <div className={"close-btn"} onClick={this.props.onChange}><img src={xlogo} alt="" /></div>}
+                <div className={"close-btn"} onClick={this.props.onChange}><img src={xlogo} alt="" /></div>
             </div >
         );
     }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Navbar from "./navbar.jsx";
 import Footer from "./footer.jsx";
 import Header from "./header.jsx";
 import MainTitle from './mainTitle.jsx';
@@ -22,7 +23,8 @@ class DrivingLicense extends Component {
     render() {
         return (
             <React.Fragment>
-                <Header/>
+                <Navbar toggled={true} />
+                <Header />
                 <div className="drivin-license">
                     <MainTitle text={texts.drivingLicense} />
                     <div className="description">
@@ -59,7 +61,7 @@ class DrivingLicense extends Component {
                     <DocumentUploader />
                     <ClientOrder className="client-order" product={data.products.DrivingLicense} />
                 </div>
-                <Footer/>
+                <Footer />
             </React.Fragment>
 
         );

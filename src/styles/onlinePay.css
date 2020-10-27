@@ -32,14 +32,15 @@
 	margin-right: 20px;
 }
 .online-pay .description .logos {
-	padding-top: 35px;
 	flex-basis: 100%;
 	display: grid;
 	grid-template-columns: auto auto auto;
+	justify-items: center;
+	justify-content: space-evenly;
+	align-content: center;
 	row-gap: 25px;
-	align-items: center;
-	justify-content: center;
 	margin-bottom: 35px;
+	margin-top: 45px;
 	height: 150px;
 }
 
@@ -48,6 +49,8 @@
 	flex-grow: 0;
 	flex-shrink: 0;
 	object-fit: contain;
+	align-self: center;
+	justify-self: center;
 }
 .online-pay hr {
 	margin: 0 auto;

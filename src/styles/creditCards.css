@@ -110,14 +110,20 @@
 .card-desc .title .table table tr:nth-child(even) {
 	background-color: var(--grey);
 }
-.card-desc .title .table table td,
-th {
+.card-desc .title .table table td {
 	border-left: solid 1px var(--blue);
 	padding: 0 5px;
 	text-align: center;
 }
-.card-desc .title .table table td:last-child,
-th:last-child {
+.card-desc .title .table table th {
+	border-left: solid 1px var(--blue);
+	padding: 0 5px;
+	text-align: center;
+}
+.card-desc .title .table table td:last-child {
+	border: none;
+}
+.card-desc .title .table table th:last-child {
 	border: none;
 }
 .card-desc .specs {

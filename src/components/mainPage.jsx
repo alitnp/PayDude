@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../styles/mainPage.css";
+import Navbar from "./navbar.jsx";
 import Footer from "./footer.jsx";
 import Header from "./header.jsx";
 import MainTitle from "./mainTitle.jsx";
@@ -17,6 +18,7 @@ class MainPage extends Component {
 	state = {};
 	render() {
 		return (<React.Fragment>
+			<Navbar toggled={true} />
 			<Header />
 			<main className="main col-xs-12">
 				<MainTitle text={texts.mainPage}

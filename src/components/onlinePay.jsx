@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Navbar from "./navbar.jsx";
 import Footer from "./footer.jsx";
 import Header from "./header.jsx";
 import MainTitle from "./mainTitle";
@@ -67,27 +68,28 @@ class OnlinePay extends Component {
 
 		return (
 			<React.Fragment>
-				<Header/>
-			<div className="online-pay">
-				<MainTitle text={texts.onlinePay} />
+				<Navbar toggled={true} />
+				<Header />
+				<div className="online-pay">
+					<MainTitle text={texts.onlinePay} />
 
-				<div className="description">
-					<p>{texts.onlinePay.desc}</p>
-					<div className="list">
-						<ul>
-							<p>سایر سرویس های پرداخت ارزی:</p>
-							{texts.onlinePay.list.map((list) => {
-								return <li key={list}>{list}</li>;
-							})}
-						</ul>
+					<div className="description">
+						<p>{texts.onlinePay.desc}</p>
+						<div className="list">
+							<ul>
+								<p>سایر سرویس های پرداخت ارزی:</p>
+								{texts.onlinePay.list.map((list) => {
+									return <li key={list}>{list}</li>;
+								})}
+							</ul>
+						</div>
+						{this.logoLoader()}
 					</div>
-					{this.logoLoader()}
+					<hr />
+					<OnlinePayForm onChange={this.handleChange} />
+					<ClientOrder product={this.state.orderDetail} />
 				</div>
-				<hr />
-				<OnlinePayForm onChange={this.handleChange} />
-				<ClientOrder product={this.state.orderDetail} />
-			</div>
-			<Footer/>
+				<Footer />
 			</React.Fragment>
 
 		);
