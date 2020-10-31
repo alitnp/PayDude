@@ -9,7 +9,7 @@ import "../styles/clientOrder.css";
 import currencyList from "../rates.json";
 
 class clientOrder extends Component {
-	state = { account: { nameFa: "", nameEn: "", email: "" } };
+	state = { account: { nameFa: "", nameEn: "", email: "" , tellNumber:""} };
 
 	handleChange = (e) => {
 		const account = { ...this.state.account };
@@ -30,7 +30,9 @@ class clientOrder extends Component {
 					<div className="form-div">
 						<div>
 							<label
-								className={account.nameFa === "" ? "" : "valued"}
+								className={
+									account.nameFa === "" ? "" : "valued"
+								}
 								htmlFor="nameFa">
 								نام و نام خانوادگی (فارسی)
 							</label>
@@ -44,7 +46,9 @@ class clientOrder extends Component {
 						</div>
 						<div>
 							<label
-								className={account.nameEn === "" ? "" : "valued"}
+								className={
+									account.nameEn === "" ? "" : "valued"
+								}
 								htmlFor="nameEn">
 								نام و نام خانوادگی (انگلیسی)
 							</label>
@@ -70,6 +74,20 @@ class clientOrder extends Component {
 								onChange={this.handleChange}
 							/>
 						</div>
+						<div>
+							<label
+								className={account.tellNumber === "" ? "" : "valued"}
+								htmlFor="tellNumber">
+								تلفن تماس
+							</label>
+							<input
+								type="number"
+								id="tellNumber"
+								name="tellNumber"
+								value={account.tellNumber}
+								onChange={this.handleChange}
+							/>
+						</div>
 					</div>
 					<div className="info-div">
 						<div className="desc cart">
@@ -89,7 +107,10 @@ class clientOrder extends Component {
 						<img className="line" src={line} alt="" />
 						<button type="submit">
 							<span>پرداخت</span>
-							<span>{Math.ceil(model.price * currencyList.USDRLS)} تومان </span>
+							<span>
+								{Math.ceil(model.price * currencyList.USDRLS)}{" "}
+								تومان{" "}
+							</span>
 						</button>
 					</div>
 				</form>

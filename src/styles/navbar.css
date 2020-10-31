@@ -44,14 +44,14 @@
 	align-items: center;
 	list-style-type: none;
 }
-.navbar ul li a {
+.navbar ul li {
 	position: relative;
 	display: inline-block;
 	text-decoration: none;
 	color: var(--text-white);
 	font-size: 14px;
 }
-.navbar ul li a::before {
+.navbar ul li::before {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -63,7 +63,7 @@
 	height: 2px;
 	content: "";
 }
-.navbar ul li a:hover::before {
+.navbar ul li:hover::before {
 	transform: scaleX(1);
 	visibility: visible;
 }

@@ -8,7 +8,7 @@ import table from "./dashboardTable";
 import "../styles/dashboard.css";
 
 class Dashboard extends Component {
-	state = { selected: "profile" };
+	state = { selected: "dashboard" };
 
 	selectedHandler = () => {
 		switch (this.state.selected) {
@@ -63,19 +63,34 @@ class Dashboard extends Component {
 						<div className="sidebar">
 							<ul>
 								<li
-									className={this.state.selected === "dashboard" && "selected"}
-									onClick={() => this.setState({ selected: "dashboard" })}>
+									className={
+										this.state.selected === "dashboard" &&
+										"selected"
+									}
+									onClick={() =>
+										this.setState({ selected: "dashboard" })
+									}>
 									داشبورد
 								</li>
 								<li
-									className={this.state.selected === "profile" && "selected"}
-									onClick={() => this.setState({ selected: "profile" })}>
+									className={
+										this.state.selected === "profile" &&
+										"selected"
+									}
+									onClick={() =>
+										this.setState({ selected: "profile" })
+									}>
 									پروفایل
 								</li>
 								<li
 									style={{ display: "none" }}
-									className={this.state.selected === "products" && "selected"}
-									onClick={() => this.setState({ selected: "products" })}>
+									className={
+										this.state.selected === "products" &&
+										"selected"
+									}
+									onClick={() =>
+										this.setState({ selected: "products" })
+									}>
 									لیست خدمات
 								</li>
 							</ul>

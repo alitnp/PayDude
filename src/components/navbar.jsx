@@ -49,17 +49,19 @@ class Navbar extends Component {
 
 					<ul className="col-xs-3 col-m-7 col-l-8">
 						<li>
-							<a href="/#">حساب بین المللی</a>
+								<Link to="/cards">حساب بین المللی</Link>
+							
 						</li>
 						<li>
-							<a href="/#">پرداخت آنلاین</a>
+							
+								<Link to="/onlinepay">پرداخت آنلاین</Link>
+							
 						</li>
-						<li>
-							<a href="/#">احراز هویت</a>
-						</li>
-						<li>
-							<a
-								href="/#"
+						{/* <li>
+							احراز هویت
+						</li> */}
+						<li
+								
 								onMouseOver={() => {
 									this.setState({ serviceDropdown: true });
 								}}
@@ -67,11 +69,18 @@ class Navbar extends Component {
 									this.setState({ serviceDropdown: false });
 								}}>
 								خدمات
-								<div className={this.state.serviceDropdown && "hovered"}>
-									<span>گواهینامه</span>
+								<div
+									className={
+										this.state.serviceDropdown && "hovered"
+									}>
+									<span>
+										<Link to="/drivinglicense">
+											گواهینامه
+										</Link>
+									</span>
 									<span>قبض و آدرس</span>
 								</div>
-							</a>
+							
 						</li>
 					</ul>
 					<Link to="/" className="logo col-xs-4 col-m-2 col-l-1">

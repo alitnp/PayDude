@@ -3,7 +3,11 @@ import "../styles/header.css";
 import slideRight from "../svgs/chevron-right.svg";
 import slideLeft from "../svgs/chevron-left.svg";
 import visaIcon from "../svgs/visa.svg";
-import cards from "../svgs/cards.png";
+import masterIcon from "../svgs/master.svg";
+import cards from "../images/cards3.png";
+import drivingIcon from "../svgs/driving-icon.svg";
+import drivingLicense from "../images/slider-drive.png";
+import masterCard from "../images/mastercard.png";
 
 class Header extends Component {
 	state = {
@@ -27,8 +31,8 @@ class Header extends Component {
 		clearInterval(this.interval);
 		let x = this.state.xposition;
 		x += add;
-		(x < -300) && (x = 0);
-		(x > 0) && (x = -300);
+		x < -300 && (x = 0);
+		x > 0 && (x = -300);
 		this.setState({
 			xposition: x,
 			bgcolor: this.state.colors[(x / 150) * -1],
@@ -72,8 +76,12 @@ class Header extends Component {
 						<div className="slide-middle slider-second">
 							<div className="slider-info">
 								<div className="slider-title ">
-									<h1>ویزا کارت</h1>
-									<img alt="" src={visaIcon} className="" />
+									<h1>گواهیامه بین المللی</h1>
+									<img
+										alt=""
+										src={drivingIcon}
+										className=""
+									/>
 								</div>
 
 								<span className="slider-text">
@@ -82,13 +90,17 @@ class Header extends Component {
 									بانکی
 								</span>
 							</div>
-							<img alt="" src={cards} className="cards" />
+							<img
+								alt=""
+								src={drivingLicense}
+								className="cards"
+							/>
 						</div>
 						<div className="slide-middle slider-third">
 							<div className="slider-info">
 								<div className="slider-title">
-									<h1>ویزا کارت</h1>
-									<img alt="" src={visaIcon} className="" />
+									<h1>مسترکارت</h1>
+									<img alt="" src={masterIcon} className="" />
 								</div>
 
 								<span className="slider-text">
@@ -97,7 +109,7 @@ class Header extends Component {
 									بانکی
 								</span>
 							</div>
-							<img alt="" src={cards} className="cards" />
+							<img alt="" src={masterCard} className="cards" />
 						</div>
 					</div>
 					<div

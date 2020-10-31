@@ -24,29 +24,31 @@ class SideMenu extends Component {
     }
     render() {
         return (
-            <div className={`side-menu ${this.state.toggled && "hidden-side-menu"}`} >
-                <Link to="/" className="logo">
-                    پیدود
+			<div
+				className={`side-menu ${
+					this.state.toggled && "hidden-side-menu"
+				}`}>
+				<Link to="/" className="logo">
+					پیدود
 					<img alt="" src={logo}></img>
-                </Link>
+				</Link>
 
-                <ul>
-                    <li>
-                        <a href="/#">حساب بین المللی</a>
-                    </li>
-                    <li>
-                        <a href="/#">پرداخت آنلاین</a>
-                    </li>
-                    <li>
-                        <a href="/#">احراز هویت</a>
-                    </li>
-                    <li>
-                        <a href="/#">خدمات</a>
-                    </li>
-                </ul>
-                <div className={"close-btn"} onClick={this.props.onChange}><img src={xlogo} alt="" /></div>
-            </div >
-        );
+				<ul>
+					<li>
+						<Link to="/cards">حساب بین المللی</Link>
+					</li>
+					<li>
+						<Link to="onlinepay">پرداخت آنلاین</Link>
+					</li>
+					<li>
+						<Link to="/drivinglicense">گواهینامه بین المللی</Link>
+					</li>
+				</ul>
+				<div className={"close-btn"} onClick={this.props.onChange}>
+					<img src={xlogo} alt="" />
+				</div>
+			</div>
+		);
     }
 }
 
