@@ -18,7 +18,7 @@
 	width: 95%;
 	margin: 15px auto;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.226);
-	border-radius: 15px;
+	border-radius: 5px;
 	direction: rtl;
 	display: flex;
 	flex-wrap: wrap;
@@ -87,7 +87,7 @@
 	width: 100%;
 	max-width: 400px;
 	height: 180px;
-	border-radius: 10px;
+	border-radius: 5px;
 	background-color: #fff;
 	border: 1px solid var(--blue);
 	display: flex;
@@ -95,6 +95,15 @@
 	margin-top: 45px;
 	margin-bottom: 25px;
 	position: relative;
+}
+.dashboard .main .dashboard-content .card .edit-icon {
+	position: absolute;
+	width: 20px;
+	top: 20px;
+	left: 20px;
+}
+.dashboard .main .dashboard-content .card .edit-icon:hover {
+	transform: scale(1.1);
 }
 .dashboard .main .dashboard-content .card small {
 	font-size: 14px;
@@ -162,4 +171,68 @@
 }
 .dashboard .main .dashboard-content .table-card table th:last-child {
 	border: none;
+}
+
+/* form */
+.dashboard form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 35px;
+	width: 100%;
+}
+.dashboard form img {
+	width: 150px;
+	height: 150px;
+	object-fit: contain;
+	border-radius: 10px;
+}
+.dashboard form div {
+	position: relative;
+	margin-top: 35px;
+	width: 400px;
+}
+.dashboard label {
+	position: absolute;
+	transition: all 0.3s;
+	height: 65px;
+	color: var(--text-grey);
+	font-size: 14px;
+	top: -5px;
+	width: 100%;
+	margin-right: 25px;
+}
+.dashboard label:hover {
+	top: -15px;
+	color: var(--text-black);
+	font-size: 10px;
+}
+.dashboard div input:focus + label {
+	top: -15px;
+	color: var(--text-black);
+	font-size: 10px;
+	height: unset;
+}
+.dashboard div .valued {
+	top: -15px;
+	color: var(--text-black);
+	font-size: 10px;
+	height: unset;
+	color: var(--text-green);
+}
+.dashboard input {
+	transition: all 0.6s;
+	margin-top: -40px;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid var(--grey);
+	width: 100%;
+	height: 60px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	padding-right: 25px;
+	padding-top: 15px;
+}
+.dashboard input:focus {
+	border-bottom: 2px solid var(--blue);
 }

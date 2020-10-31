@@ -67,6 +67,38 @@
 	transform: scaleX(1);
 	visibility: visible;
 }
+
+.navbar ul li div {
+	position: absolute;
+	left: -50px;
+	transform: translateY(0px);
+	background-color: var(--text-white);
+	color: var(--text-black);
+	width: 150px;
+	height: 0px;
+	border-radius: 5px;
+	box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.205);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	overflow: hidden;
+	transition: all 0.3s;
+	opacity: 0;
+}
+.navbar ul li .hovered {
+	opacity: 1;
+	height: 100px;
+}
+.navbar ul li div span {
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	padding: 12px;
+}
+.navbar ul li div span:hover {
+	background-color: var(--dim-blue);
+}
 .navbar .logo {
 	display: flex;
 	align-items: center;

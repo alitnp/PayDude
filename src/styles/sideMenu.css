@@ -58,18 +58,22 @@
 }
 .side-menu .close-btn {
 	position: absolute;
-	left: -27px;
+	left: -14px;
 	top: 65px;
 	background-color: var(--blue);
-	width: 55px;
-	height: 55px;
+	width: 35px;
+	height: 35px;
 	border-radius: 35px;
-	padding: 18px;
+	padding: 7px;
+	padding-left: 10px;
 	z-index: 5;
 	transition: all 0.3s;
 }
 .side-menu .close-btn:hover {
 	box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.267);
+}
+.side-menu .close-btn img{
+	width: 14px;
 }
 /* .header Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {

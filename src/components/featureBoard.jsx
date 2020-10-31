@@ -23,12 +23,6 @@ const featureBoard = () => {
 						<li>مستر کارت</li>
 						<li>حواله به حساب</li>
 					</ul>
-					<ul className="">
-						<li>ویزا کارت</li>
-						<li>مستر کارت</li>
-						<li>حواله به حساب</li>
-						<li>ویزا کارت</li>
-					</ul>
 				</div>
 			</div>
 			<div className="feature-card ">
@@ -45,14 +39,9 @@ const featureBoard = () => {
 						<li>مستر کارت</li>
 						<li>حواله به حساب</li>
 					</ul>
-					<ul className="">
-						<li>ویزا کارت</li>
-						<li>مستر کارت</li>
-						<li>حواله به حساب</li>
-					</ul>
 				</div>
 			</div>
-			<div className="feature-card ">
+			<div className="feature-card " style={{ display: "none" }}>
 				<div className="card-title">
 					<img src={cardlogo3} alt="" className=" " />
 					<h3>انتقال وجه به سراسر دنیا</h3>
@@ -75,7 +64,9 @@ const featureBoard = () => {
 			<div className="feature-card ">
 				<div className="card-title">
 					<img src={cardlogo4} alt="" className=" " />
-					<Link to="/drivinglicense"><h3>احراز هویت بین المللی</h3></Link>
+					<Link to="/drivinglicense">
+						<h3>احراز هویت بین المللی</h3>
+					</Link>
 				</div>
 				<div className="card-list">
 					<ul className="">
@@ -83,12 +74,6 @@ const featureBoard = () => {
 						<li className="">ویزا کارت</li>
 						<li>مستر کارت</li>
 						<li>حواله به حساب</li>
-					</ul>
-					<ul className="">
-						<li>ویزا کارت</li>
-						<li>مستر کارت</li>
-						<li>حواله به حساب</li>
-						<li>ویزا کارت</li>
 					</ul>
 				</div>
 			</div>

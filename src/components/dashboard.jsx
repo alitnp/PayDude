@@ -1,27 +1,58 @@
 import React, { Component } from "react";
 import Navbar from "./navbar";
 import user from "../user.json";
-import profileCard from "./profileCard";
+import profile from "../images/profile.png";
+import editIcon from "../svgs/edit.svg";
+import ProfileEditor from "./dashboardProfileEditor";
 import table from "./dashboardTable";
 import "../styles/dashboard.css";
 
 class Dashboard extends Component {
-	state = { selected: "dashboard" };
+	state = { selected: "profile" };
 
 	selectedHandler = () => {
 		switch (this.state.selected) {
 			case "dashboard":
 				return (
 					<div className="dashboard-content">
-						{profileCard(user)}
+						{this.profileCard(user)}
 						{table(user.orders, "لیست سفارش ها")}
+					</div>
+				);
+			case "profile":
+				return (
+					<div className="dashboard-content">
+						<ProfileEditor user={user} />
 					</div>
 				);
 			default:
 				break;
 		}
 	};
-
+	profileCard = (user) => {
+		return (
+			<div className=" card profile-card">
+				<img
+					className="edit-icon"
+					src={editIcon}
+					alt=""
+					onClick={() => {
+						this.setState({ selected: "profile" });
+					}}
+				/>
+				<small>کاربر</small>
+				<div className="pic">
+					<img src={profile} alt="" />
+				</div>
+				<div className="info">
+					<span>نام: {user.usernameFa}</span>
+					<span>نام انگلیسی: {user.usernameEn}</span>
+					<span>ایمیل: {user.email}</span>
+					<span>شماره موبایل: {user.phonenumber}</span>
+				</div>
+			</div>
+		);
+	};
 	render() {
 		return (
 			<React.Fragment>
@@ -32,33 +63,19 @@ class Dashboard extends Component {
 						<div className="sidebar">
 							<ul>
 								<li
-									className={
-										this.state.selected === "dashboard" &&
-										"selected"
-									}
-									onClick={() =>
-										this.setState({ selected: "dashboard" })
-									}>
+									className={this.state.selected === "dashboard" && "selected"}
+									onClick={() => this.setState({ selected: "dashboard" })}>
 									داشبورد
 								</li>
 								<li
-									className={
-										this.state.selected === "profile" &&
-										"selected"
-									}
-									onClick={() =>
-										this.setState({ selected: "profile" })
-									}>
+									className={this.state.selected === "profile" && "selected"}
+									onClick={() => this.setState({ selected: "profile" })}>
 									پروفایل
 								</li>
 								<li
-									className={
-										this.state.selected === "products" &&
-										"selected"
-									}
-									onClick={() =>
-										this.setState({ selected: "products" })
-									}>
+									style={{ display: "none" }}
+									className={this.state.selected === "products" && "selected"}
+									onClick={() => this.setState({ selected: "products" })}>
 									لیست خدمات
 								</li>
 							</ul>
