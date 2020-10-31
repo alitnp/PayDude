@@ -1,31 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d09864b2508d031ea62ac24f4957c874",
+    "revision": "e557108dcd59619802bddedabe439473",
     "url": "./index.html"
   },
   {
-    "revision": "5c9b2e6c80fdca61f4ba",
-    "url": "./static/css/main.bd80711f.chunk.css"
+    "revision": "fe3b226c4d5a55ebd424",
+    "url": "./static/css/main.50304699.chunk.css"
   },
   {
-    "revision": "725bdc6087a6e701485a",
-    "url": "./static/js/2.06969305.chunk.js"
+    "revision": "7b97a3f99a53a29a8b5d",
+    "url": "./static/js/2.2c1a2418.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "./static/js/2.06969305.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.2c1a2418.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5c9b2e6c80fdca61f4ba",
-    "url": "./static/js/main.61357ac9.chunk.js"
+    "revision": "fe3b226c4d5a55ebd424",
+    "url": "./static/js/main.fce6a1d0.chunk.js"
   },
   {
     "revision": "9483b9d32009400b82f7",
     "url": "./static/js/runtime-main.d2cc313d.js"
-  },
-  {
-    "revision": "77e59adfa7310798746af7b03b0c24d9",
-    "url": "./static/media/Binance_logo.77e59adf.svg"
   },
   {
     "revision": "cfa9fd4fb698ac1f35a10f148e397689",
@@ -92,8 +88,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/card-logo-4.00605491.svg"
   },
   {
-    "revision": "82c0d885e7fd0b4aa4aa41e6da3469f9",
-    "url": "./static/media/cards.82c0d885.png"
+    "revision": "bce36be2e42e63e57949e279486a2898",
+    "url": "./static/media/cards3.bce36be2.png"
   },
   {
     "revision": "d3ec9acfdfd8f974f01dcfe2302f3d23",
@@ -116,8 +112,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/drive-id.13d32062.svg"
   },
   {
+    "revision": "ac904f1e1db12037dc3966ac585cc8b1",
+    "url": "./static/media/driving-icon.ac904f1e.svg"
+  },
+  {
     "revision": "11173f64d0eb5dfc9da9d43ff1473807",
     "url": "./static/media/driving-licence.11173f64.png"
+  },
+  {
+    "revision": "70454fa7c11267547b1c96be688dbd81",
+    "url": "./static/media/edit.70454fa7.svg"
   },
   {
     "revision": "21bb305c47dc4371c30e0844483e6a9f",
@@ -152,6 +156,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/master-grey.de787396.svg"
   },
   {
+    "revision": "956d7ca3a761a6aa25844e2a05201e6e",
+    "url": "./static/media/master.956d7ca3.svg"
+  },
+  {
+    "revision": "9d5aa3a51f56f98b160aaac99f56d03c",
+    "url": "./static/media/mastercard.9d5aa3a5.png"
+  },
+  {
     "revision": "09f039c2d25204fd4651ae792a6db5cf",
     "url": "./static/media/netflix.09f039c2.svg"
   },
@@ -182,6 +194,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "493131ffe9e4e2ea3a041d02647dab46",
     "url": "./static/media/shopping-cart.493131ff.svg"
+  },
+  {
+    "revision": "34e7626cf4db365fc272b600079171d5",
+    "url": "./static/media/slider-drive.34e7626c.png"
   },
   {
     "revision": "fc0a319aab8a9e75fe65d7ca713d8cd7",
