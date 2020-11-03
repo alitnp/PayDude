@@ -15,11 +15,9 @@ class OnlinePay extends Component {
 
 	componentDidMount() {
 		window.scrollTo(0, 0);
-		this.interval = setInterval(
-			() => { this.setState({ time: Date.now() }); },
-			5000
-		);
-
+		this.interval = setInterval(() => {
+			this.setState({ time: Date.now() });
+		}, 5000);
 	}
 	componentWillUnmount() {
 		clearInterval(this.interval);
@@ -27,14 +25,14 @@ class OnlinePay extends Component {
 	handleChange = (formOrderDetail) => {
 		const orderDetail = this.state.orderDetail;
 		orderDetail.model = formOrderDetail;
-		const usdRate = (orderDetail.model.amount / currencyList.rates[orderDetail.model.currency]).toFixed(2);
+		const usdRate = (
+			orderDetail.model.amount / currencyList.rates[orderDetail.model.currency]
+		).toFixed(2);
 		orderDetail.model.price = usdRate;
 		this.setState({ orderDetail });
 		console.log(this.state);
-
-	}
+	};
 	logoLoader = () => {
-
 		const logos = [
 			<img src={require("../svgs/logos/airbnb.svg")} key="0" alt="" />,
 			<img src={require("../svgs/logos/apple.svg")} key="1" alt="" />,
@@ -65,7 +63,6 @@ class OnlinePay extends Component {
 	};
 
 	render() {
-
 		return (
 			<React.Fragment>
 				<Navbar toggled={true} />
@@ -91,7 +88,6 @@ class OnlinePay extends Component {
 				</div>
 				<Footer />
 			</React.Fragment>
-
 		);
 	}
 }

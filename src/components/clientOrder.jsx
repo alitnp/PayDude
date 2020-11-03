@@ -7,32 +7,54 @@ import dot from "../svgs/dot.svg";
 import paymentPic from "../images/payment-pic.jpg";
 import "../styles/clientOrder.css";
 import currencyList from "../rates.json";
+import { toast } from "react-toastify";
+import Joi from "joi-browser";
+import "react-toastify/dist/ReactToastify.css";
+
+toast.configure();
 
 class clientOrder extends Component {
-	state = { account: { nameFa: "", nameEn: "", email: "" , tellNumber:""} };
+	state = { account: { nameFa: "", nameEn: "", email: "", tellNumber: "" } };
+
+	schema = Joi.object().keys({
+		nameFa: Joi.string()
+			.regex(/^[آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی]+$/)
+			.required()
+			.error(() => {
+				return "dfsfsfssd";
+			}),
+	});
 
 	handleChange = (e) => {
 		const account = { ...this.state.account };
 		account[e.target.name] = e.target.value;
 		this.setState({ account });
 	};
-	isValidURL(string) {
-		var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-		return (res !== null)
+	handleSubmit = (e) => {
+		e.preventDefault();
+		toast.warn("تکمیل فیلد", {
+			position: "top-right",
+			autoClose: 5000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+		});
+		console.log(this.schema.validate(this.state.account));
 	};
+
 	render() {
 		const { account } = this.state;
 		const { model } = this.props.product;
 		return (
 			<div className="client-order">
-				<form action="">
+				<form action="" onSubmit={this.handleSubmit}>
 					<img className="bgimg" src={paymentPic} alt="" />
 					<div className="form-div">
 						<div>
 							<label
-								className={
-									account.nameFa === "" ? "" : "valued"
-								}
+								className={account.nameFa === "" ? "" : "valued"}
 								htmlFor="nameFa">
 								نام و نام خانوادگی (فارسی)
 							</label>
@@ -46,9 +68,7 @@ class clientOrder extends Component {
 						</div>
 						<div>
 							<label
-								className={
-									account.nameEn === "" ? "" : "valued"
-								}
+								className={account.nameEn === "" ? "" : "valued"}
 								htmlFor="nameEn">
 								نام و نام خانوادگی (انگلیسی)
 							</label>
@@ -107,10 +127,7 @@ class clientOrder extends Component {
 						<img className="line" src={line} alt="" />
 						<button type="submit">
 							<span>پرداخت</span>
-							<span>
-								{Math.ceil(model.price * currencyList.USDRLS)}{" "}
-								تومان{" "}
-							</span>
+							<span>{Math.ceil(model.price * currencyList.USDRLS)} تومان </span>
 						</button>
 					</div>
 				</form>

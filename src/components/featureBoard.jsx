@@ -1,7 +1,7 @@
 import React from "react";
 import cardlogo1 from "../svgs/card-logo-1.svg";
 import cardlogo2 from "../svgs/card-logo-2.svg";
-import cardlogo3 from "../svgs/card-logo-3.svg";
+// import cardlogo3 from "../svgs/card-logo-3.svg";
 import cardlogo4 from "../svgs/card-logo-4.svg";
 import "../styles/featureBoard.css";
 import { Link } from "react-router-dom";

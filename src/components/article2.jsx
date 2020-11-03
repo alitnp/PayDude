@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/article.css";
 import arrow from "../svgs/arrow.svg";
 
@@ -14,8 +15,7 @@ const article2 = () => {
 						<br />
 						پرداخت و خرید کالا و محصولات مجازی و غیر فیزیکی <br />
 						پرداخت هزینه دانشگاه های خارجی <br />
-						پرداخت هزینه سفارت های خارجی جهت اخذ ویزا، تایید مدارک
-						و... <br />
+						پرداخت هزینه سفارت های خارجی جهت اخذ ویزا، تایید مدارک و... <br />
 						پرداخت هزینه خرید هاست و دامنه های خارجی <br />
 						پرداخت و رزرو هتل در سراسر دنیا <br />
 						پرداخت هزینه حق اشتراک سایت های مختلف <br />
@@ -26,7 +26,9 @@ const article2 = () => {
 				<div className="order-icons col-xs-12">
 					<div className="order">
 						<img src={arrow} alt="" />
-						<span>ثبت سفارش</span>
+						<Link to="/onlinepay">
+							<span>ثبت سفارش</span>
+						</Link>
 					</div>
 					<div className="icons"></div>
 				</div>

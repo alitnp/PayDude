@@ -8,6 +8,7 @@ import cards from "../images/cards3.png";
 import drivingIcon from "../svgs/driving-icon.svg";
 import drivingLicense from "../images/slider-drive.png";
 import masterCard from "../images/mastercard.png";
+import { Link } from "react-router-dom";
 
 class Header extends Component {
 	state = {
@@ -58,59 +59,59 @@ class Header extends Component {
 						style={{
 							transform: `translateX(${this.state.xposition}%)`,
 						}}>
-						<div className="slide-middle">
-							<div className="slider-info ">
-								<div className="slider-title">
-									<h1>ویزا کارت</h1>
-									<img alt="" src={visaIcon} className="" />
-								</div>
+						<Link
+							to={{
+								pathname: "/cards/Visa"}}>
+							<div className="slide-middle">
+								<div className="slider-info ">
+									<div className="slider-title">
+										<h1>ویزا کارت</h1>
+										<img alt="" src={visaIcon} className="" />
+									</div>
 
-								<span className="slider-text">
-									ویزا کارت با نام شما، دارای حساب بانکی
-									مستقل، اینترنت بانک و امکان ارسال حواله
-									بانکی
-								</span>
-							</div>
-							<img alt="" src={cards} className="cards" />
-						</div>
-						<div className="slide-middle slider-second">
-							<div className="slider-info">
-								<div className="slider-title ">
-									<h1>گواهیامه بین المللی</h1>
-									<img
-										alt=""
-										src={drivingIcon}
-										className=""
-									/>
+									<span className="slider-text">
+										ویزا کارت با نام شما، دارای حساب بانکی مستقل، اینترنت بانک و
+										امکان ارسال حواله بانکی
+									</span>
 								</div>
-
-								<span className="slider-text">
-									ویزا کارت با نام شما، دارای حساب بانکی
-									مستقل، اینترنت بانک و امکان ارسال حواله
-									بانکی
-								</span>
+								<img alt="" src={cards} className="cards" />
 							</div>
-							<img
-								alt=""
-								src={drivingLicense}
-								className="cards"
-							/>
-						</div>
-						<div className="slide-middle slider-third">
-							<div className="slider-info">
-								<div className="slider-title">
-									<h1>مسترکارت</h1>
-									<img alt="" src={masterIcon} className="" />
+						</Link>
+						<Link to="/drivinglicense">
+							<div className="slide-middle slider-second">
+								<div className="slider-info">
+									<div className="slider-title ">
+										<h1>گواهیامه بین المللی</h1>
+										<img alt="" src={drivingIcon} className="" />
+									</div>
+
+									<span className="slider-text">
+										ویزا کارت با نام شما، دارای حساب بانکی مستقل، اینترنت بانک و
+										امکان ارسال حواله بانکی
+									</span>
 								</div>
-
-								<span className="slider-text">
-									ویزا کارت با نام شما، دارای حساب بانکی
-									مستقل، اینترنت بانک و امکان ارسال حواله
-									بانکی
-								</span>
+								<img alt="" src={drivingLicense} className="cards" />
 							</div>
-							<img alt="" src={masterCard} className="cards" />
-						</div>
+						</Link>
+						<Link
+							to={{
+								pathname: "/cards/Master"
+							}}>
+							<div className="slide-middle slider-third">
+								<div className="slider-info">
+									<div className="slider-title">
+										<h1>مسترکارت</h1>
+										<img alt="" src={masterIcon} className="" />
+									</div>
+
+									<span className="slider-text">
+										ویزا کارت با نام شما، دارای حساب بانکی مستقل، اینترنت بانک و
+										امکان ارسال حواله بانکی
+									</span>
+								</div>
+								<img alt="" src={masterCard} className="cards" />
+							</div>
+						</Link>
 					</div>
 					<div
 						className="slide-button col-xs-1"
