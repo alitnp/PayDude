@@ -79,7 +79,7 @@ input::-webkit-inner-spin-button {
 	outline: none;
 	height: 35px;
 	width: 200px;
-	border: 2px solid var(--grey);
+	border: 1px solid var(--grey);
 	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -90,6 +90,11 @@ input::-webkit-inner-spin-button {
 	border-radius: 5px;
 	color: var(--text-grey);
 	background-color: #fff;
+	transition: all 0.3s;
+}
+.Online-pay-form .form-div select:focus {
+	border: 1px solid var(--blue);
+	box-shadow: 0 0 15px 0 var(--blue-shadow);
 }
 .Online-pay-form .form-div select option {
 	text-align-last: center;
@@ -97,6 +102,7 @@ input::-webkit-inner-spin-button {
 	-ms-text-align-last: center;
 	-moz-text-align-last: center;
 }
+
 .Online-pay-form form .form-div textarea {
 	width: 100%;
 	height: 150px;
@@ -106,10 +112,13 @@ input::-webkit-inner-spin-button {
 	outline: none;
 	padding: 10px;
 	background-color: #fff;
-	border: 2px solid var(--grey);
+	border: 1px solid var(--grey);
+	box-shadow: 0 0 0px 0 var(--blue-shadow);
+	transition: all 0.3s;
 }
 .Online-pay-form form .form-div textarea:focus {
 	border: 1px solid var(--blue);
+	box-shadow: 0 0 15px 0 var(--blue-shadow);
 }
 .Online-pay-form .form-div div {
 	position: relative;

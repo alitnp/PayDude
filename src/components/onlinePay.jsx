@@ -30,7 +30,6 @@ class OnlinePay extends Component {
 		).toFixed(2);
 		orderDetail.model.price = usdRate;
 		this.setState({ orderDetail });
-		console.log(this.state);
 	};
 	logoLoader = () => {
 		const logos = [
@@ -63,6 +62,7 @@ class OnlinePay extends Component {
 	};
 
 	render() {
+		const { orderLink, amount } = this.state.orderDetail.model;
 		return (
 			<React.Fragment>
 				<Navbar toggled={true} />
@@ -84,7 +84,10 @@ class OnlinePay extends Component {
 					</div>
 					<hr />
 					<OnlinePayForm onChange={this.handleChange} />
-					<ClientOrder product={this.state.orderDetail} />
+					<ClientOrder
+						product={this.state.orderDetail}
+						disabled={orderLink === "" || amount === ""}
+					/>
 				</div>
 				<Footer />
 			</React.Fragment>

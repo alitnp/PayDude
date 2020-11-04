@@ -41,6 +41,7 @@
 }
 .feature-board .feature-card .card-list {
 	width: 90%;
+	margin-right: 35px;
 }
 .feature-board .feature-card .card-list ul {
 	display: flex;
@@ -90,9 +91,10 @@
 		width: 80%;
 	}
 	.feature-board .feature-card {
-		width: 30%;
+		width: 31%;
 		height: 300px;
 		max-width: 300px;
+		padding-top: 20px;
 	}
 	.feature-board .feature-card .card-title {
 		flex-direction: column;
@@ -107,6 +109,7 @@
 	}
 	.feature-board .feature-card .card-list {
 		margin: 0;
+		margin-right: 15px;
 		padding: 0;
 		height: 235px;
 		width: 70%;

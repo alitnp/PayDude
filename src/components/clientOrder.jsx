@@ -143,7 +143,7 @@ class clientOrder extends Component {
 							زمان: {model.time}
 						</div>
 						<img className="line" src={line} alt="" />
-						<button type="submit">
+						<button type="submit" disabled={this.props.disabled}>
 							<span>پرداخت</span>
 							<span>{Math.ceil(model.price * currencyList.USDRLS)} تومان </span>
 						</button>
