@@ -70,7 +70,6 @@
 
 .navbar ul li div {
 	position: absolute;
-	left: -50px;
 	transform: translateY(0px);
 	background-color: var(--text-white);
 	color: var(--text-black);

@@ -11,6 +11,7 @@ class Navbar extends Component {
 	state = {
 		toggled: true,
 		serviceDropdown: false,
+		cardsDropdown: false,
 	};
 	handleToggle = () => {
 		const isToggled = this.state.toggled;
@@ -48,39 +49,47 @@ class Navbar extends Component {
 					</div>
 
 					<ul className="col-xs-3 col-m-7 col-l-8">
-						<li>
-								<Link to="/cards">حساب بین المللی</Link>
-							
+						<li
+							onMouseOver={() => {
+								this.setState({ cardsDropdown: true });
+							}}
+							onMouseLeave={() => {
+								this.setState({ cardsDropdown: false });
+							}}>
+							<Link to="/cards">حساب بین المللی</Link>
+							<div
+								className={this.state.cardsDropdown && "hovered"}
+								style={{ left: "-20px" }}>
+								<span>
+									<Link to="/cards/Visa">ویزا کارت</Link>
+								</span>
+								<span>
+									<Link to="/cards/Master">مستر کارت</Link>
+								</span>
+							</div>
 						</li>
 						<li>
-							
-								<Link to="/onlinepay">پرداخت آنلاین</Link>
-							
+							<Link to="/onlinepay">پرداخت آنلاین</Link>
 						</li>
 						{/* <li>
 							احراز هویت
 						</li> */}
 						<li
-								
-								onMouseOver={() => {
-									this.setState({ serviceDropdown: true });
-								}}
-								onMouseLeave={() => {
-									this.setState({ serviceDropdown: false });
-								}}>
-								خدمات
-								<div
-									className={
-										this.state.serviceDropdown && "hovered"
-									}>
-									<span>
-										<Link to="/drivinglicense">
-											گواهینامه
-										</Link>
-									</span>
-									<span>قبض و آدرس</span>
-								</div>
-							
+							onMouseOver={() => {
+								this.setState({ serviceDropdown: true });
+							}}
+							onMouseLeave={() => {
+								this.setState({ serviceDropdown: false });
+							}}>
+							خدمات
+							<div
+								className={this.state.serviceDropdown && "hovered"}
+								style={{ left: "-50px" }}>
+								<span>
+									<Link to="/drivinglicense">گواهینامه</Link>
+								</span>
+								<span>قبض و آدرس</span>
+							</div>
 						</li>
 					</ul>
 					<Link to="/" className="logo col-xs-4 col-m-2 col-l-1">

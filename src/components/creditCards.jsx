@@ -18,20 +18,24 @@ class CreditCards extends Component {
 	state = { product: data.products.Visa, expanded: false };
 	componentDidMount() {
 		window.scrollTo(0, 0);
+		const selectedCard = this.props.location.pathname.slice(7);
+		(selectedCard !== "") & (selectedCard !== undefined) &&
+			this.hanleCardChange(selectedCard);
 	}
-	hanleCardChange = (cardName, cardModel = 1) => {
+	componentDidUpdate(prevProps, prevState) {
+		if (this.props.location.pathname !== prevProps.location.pathname) {
+			const selectedCard = this.props.location.pathname.slice(7);
+			(selectedCard !== "") & (selectedCard !== undefined) &&
+				this.hanleCardChange(selectedCard);
+		}
+	}
+	hanleCardChange = (cardName = "Visa", cardModel = 1) => {
 		const selectedCard = data.products[cardName];
 		selectedCard.model = selectedCard.cardModels[cardModel];
 		this.setState({ product: selectedCard, expanded: false });
 	};
 	render() {
-		const {
-			nameEn,
-			nameFa,
-			model,
-			specs,
-			description,
-		} = this.state.product;
+		const { nameEn, nameFa, model, specs, description } = this.state.product;
 		const { expanded } = this.state;
 		return (
 			<React.Fragment>
@@ -41,8 +45,7 @@ class CreditCards extends Component {
 					<div className="cards col-xs-12">
 						<span>انتخاب کارت :</span>
 						<div
-							className={`card-choice ${nameEn === "Visa" && "selected"
-								}`}
+							className={`card-choice ${nameEn === "Visa" && "selected"}`}
 							onClick={() => {
 								this.hanleCardChange("Visa");
 							}}>
@@ -50,8 +53,7 @@ class CreditCards extends Component {
 							<img src={visacard} alt="" />
 						</div>
 						<div
-							className={`card-choice ${nameEn === "Master" && "selected"
-								}`}
+							className={`card-choice ${nameEn === "Master" && "selected"}`}
 							onClick={() => {
 								this.hanleCardChange("Master");
 							}}>
@@ -62,10 +64,7 @@ class CreditCards extends Component {
 					<div className="card-desc">
 						<div className="title">
 							<h1>
-								<img
-									src={nameEn === "Visa" ? visagrey : mastergrey}
-									alt=""
-								/>
+								<img src={nameEn === "Visa" ? visagrey : mastergrey} alt="" />
 								{nameFa}
 								<hr />
 							</h1>
@@ -77,48 +76,30 @@ class CreditCards extends Component {
 											<th>انتخاب نوع کارت :</th>
 											<th>
 												<button
-													className={
-														model.level === 1 &&
-														"active"
-													}
+													className={model.level === 1 && "active"}
 													onClick={() => {
-														this.hanleCardChange(
-															nameEn,
-															1
-														);
+														this.hanleCardChange(nameEn, 1);
 													}}>
 													نقره ای
-											</button>
+												</button>
 											</th>
 											<th>
 												<button
-													className={
-														model.level === 2 &&
-														"active"
-													}
+													className={model.level === 2 && "active"}
 													onClick={() => {
-														this.hanleCardChange(
-															nameEn,
-															2
-														);
+														this.hanleCardChange(nameEn, 2);
 													}}>
 													طلایی
-											</button>
+												</button>
 											</th>
 											<th>
 												<button
-													className={
-														model.level === 3 &&
-														"active"
-													}
+													className={model.level === 3 && "active"}
 													onClick={() => {
-														this.hanleCardChange(
-															nameEn,
-															3
-														);
+														this.hanleCardChange(nameEn, 3);
 													}}>
 													پلاتینیومی
-											</button>
+												</button>
 											</th>
 										</tr>
 									</thead>
@@ -155,7 +136,7 @@ class CreditCards extends Component {
 						<div className={"specs " + (expanded && "expanded")}>
 							<h3>
 								مشخصات
-							<hr />
+								<hr />
 							</h3>
 							<ul>
 								{specs.map((list) => {
@@ -175,38 +156,35 @@ class CreditCards extends Component {
 						<div className="ability">
 							<img src={abilit1} alt="" />
 							<span>
-								خرید اپلیکیشن ها و بازی های موبایل و پرداخت های درون
-								برنامه ای
-						</span>
+								خرید اپلیکیشن ها و بازی های موبایل و پرداخت های درون برنامه ای
+							</span>
 						</div>
 						<div className="ability">
 							<img src={abilit2} alt="" />
 							<span>
-								پرداخت آنلاین به کلیه سایت هایی که از درگاه ویزا
-								پشتیبانی می کنند و برداشت پول نقد از دستگاه های خود
-								پرداز در سراسر دنیا
-						</span>
+								پرداخت آنلاین به کلیه سایت هایی که از درگاه ویزا پشتیبانی می
+								کنند و برداشت پول نقد از دستگاه های خود پرداز در سراسر دنیا
+							</span>
 						</div>
 						<div className="ability">
 							<img src={abilit3} alt="" />
 							<span>
-								احراز هویت و اتصال به حساب های پی پال، سکریل، پیزا،
-								اوکی پی و غیره
-						</span>
+								احراز هویت و اتصال به حساب های پی پال، سکریل، پیزا، اوکی پی و
+								غیره
+							</span>
 						</div>
 						<div className="ability">
 							<img src={abilit4} alt="" />
 							<span>
-								خرید بلیط کلیه پروازهای خارجی، قطارها و رزرو آنلاین
-								هتل، کنسرت و همایش ها
-						</span>
+								خرید بلیط کلیه پروازهای خارجی، قطارها و رزرو آنلاین هتل، کنسرت و
+								همایش ها
+							</span>
 						</div>
 					</div>
 					<ClientOrder product={{ model }} />
 				</div>
 				<Footer />
 			</React.Fragment>
-
 		);
 	}
 }

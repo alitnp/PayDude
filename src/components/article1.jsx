@@ -4,6 +4,7 @@ import visacard from "../svgs/visa-colored.svg";
 import mastercard from "../svgs/master-colored.svg";
 import arrow from "../svgs/arrow.svg";
 import data from "../data.json";
+import { Link } from "react-router-dom";
 
 const article1 = () => {
 	return (
@@ -20,7 +21,9 @@ const article1 = () => {
 				<div className="order-icons col-xs-12">
 					<div className="order">
 						<img src={arrow} alt="" />
-						<span>ثبت سفارش</span>
+						<Link to="/cards">
+							<span>ثبت سفارش</span>
+						</Link>
 					</div>
 					<div className="icons">
 						<img src={visacard} alt="" />

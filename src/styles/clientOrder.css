@@ -68,6 +68,10 @@
 	border-bottom: 2px solid var(--grey);
 	width: 100%;
 }
+.client-order .form-div input[type=number]{
+	appearance: textfield;
+
+}
 .client-order .form-div input:focus {
 	border-bottom: 2px solid var(--blue);
 }
