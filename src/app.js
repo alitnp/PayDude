@@ -6,7 +6,7 @@ import OnlinePay from "./components/onlinePay.jsx";
 import DrivingLicense from "./components/drivingLicense.jsx";
 import BillAddress from "./components/billAddress";
 import Dashboard from "./components/dashboard.jsx";
-import Navbar from "./components/navbar.jsx";
+// import Navbar from "./components/navbar.jsx";
 
 class App extends Component {
 	render() {

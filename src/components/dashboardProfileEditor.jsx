@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import profile from "../images/profile.png";
-import editIcon from "../svgs/edit.svg";
 
 class ProfileEditor extends Component {
 	state = {};

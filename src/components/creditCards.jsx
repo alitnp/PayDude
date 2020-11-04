@@ -85,7 +85,7 @@ class CreditCards extends Component {
 											</th>
 											<th>
 												<button
-													className={model.level === 2 && "active"}
+													className={model.level === 2 ? "active" : ""}
 													onClick={() => {
 														this.hanleCardChange(nameEn, 2);
 													}}>
@@ -94,7 +94,7 @@ class CreditCards extends Component {
 											</th>
 											<th>
 												<button
-													className={model.level === 3 && "active"}
+													className={model.level === 3 ? "active" : ""}
 													onClick={() => {
 														this.hanleCardChange(nameEn, 3);
 													}}>
@@ -140,7 +140,7 @@ class CreditCards extends Component {
 							</h3>
 							<ul>
 								{specs.map((list) => {
-									return <li>{list}</li>;
+									return <li key={list}>{list}</li>;
 								})}
 							</ul>
 							<div

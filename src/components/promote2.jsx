@@ -3,7 +3,7 @@ import "../styles/promote.css";
 import bill from "../svgs/bill.svg";
 const promote = (props) => {
     return (
-        <a
+        <div
             href="/#"
             style={{ textDecoration: "none", color: "var(--blue)" }}>
             <div
@@ -15,7 +15,7 @@ const promote = (props) => {
 
                 </div>
             </div>
-        </a>
+        </div>
     );
 };
 

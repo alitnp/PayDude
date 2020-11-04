@@ -7,7 +7,7 @@ import dot from "../svgs/dot.svg";
 import paymentPic from "../images/payment-pic.jpg";
 import "../styles/clientOrder.css";
 import currencyList from "../rates.json";
-import { toast } from "react-toastify";
+import { ToastContainer, toast, Flip } from "react-toastify";
 import Joi from "joi-browser";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -18,11 +18,24 @@ class clientOrder extends Component {
 
 	schema = Joi.object().keys({
 		nameFa: Joi.string()
-			.regex(/^[آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی]+$/)
+			.regex(/^[ئءآابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی]+$/)
+			.min(6)
 			.required()
-			.error(() => {
-				return "dfsfsfssd";
-			}),
+			.error(new Error("نام فارسی به درستی وارد نشده")),
+		nameEn: Joi.string()
+			.regex(/^$|^[a-zA-Z]*$/)
+			.allow(null, "")
+			.error(new Error("نام انگلیسی به درستی وارد نشده")),
+		email: Joi.string()
+			.email()
+			.allow(null, "")
+			.error(new Error("ایمیل به درستی وارد نشده")),
+		tellNumber: Joi.string()
+			.regex(/^09/)
+			.min(11)
+			.max(11)
+			.required()
+			.error(new Error("شماره موبایل به درستی وارد نشده")),
 	});
 
 	handleChange = (e) => {
@@ -32,16 +45,21 @@ class clientOrder extends Component {
 	};
 	handleSubmit = (e) => {
 		e.preventDefault();
-		toast.warn("تکمیل فیلد", {
-			position: "top-right",
-			autoClose: 5000,
-			hideProgressBar: false,
-			closeOnClick: true,
-			pauseOnHover: true,
-			draggable: true,
-			progress: undefined,
-		});
-		console.log(this.schema.validate(this.state.account));
+		const { error } = this.schema.validate(this.state.account);
+		if (error) {
+			toast.warn(error.message, {
+				position: "top-right",
+				autoClose: 3000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				transition: Flip,
+			});
+			return;
+		}
+		// call server
 	};
 
 	render() {
@@ -56,7 +74,7 @@ class clientOrder extends Component {
 							<label
 								className={account.nameFa === "" ? "" : "valued"}
 								htmlFor="nameFa">
-								نام و نام خانوادگی (فارسی)
+								نام و نام خانوادگی (فارسی)*
 							</label>
 							<input
 								type="text"
@@ -98,7 +116,7 @@ class clientOrder extends Component {
 							<label
 								className={account.tellNumber === "" ? "" : "valued"}
 								htmlFor="tellNumber">
-								تلفن تماس
+								شماره موبایل*
 							</label>
 							<input
 								type="number"
@@ -131,6 +149,17 @@ class clientOrder extends Component {
 						</button>
 					</div>
 				</form>
+				<ToastContainer
+					position="top-right"
+					autoClose={3000}
+					hideProgressBar={false}
+					newestOnTop={false}
+					closeOnClick
+					rtl
+					pauseOnFocusLoss={false}
+					draggable
+					pauseOnHover
+				/>
 			</div>
 		);
 	}
