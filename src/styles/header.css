@@ -39,6 +39,7 @@
 	position: relative;
 	transition: all 0.8s;
 	height: 100%;
+	border: 1px solid black;
 }
 .slide-middle {
 	box-sizing: border-box;
@@ -51,6 +52,9 @@
 	width: 100%;
 	height: 350px;
 	overflow: visible;
+	max-width: 800px;
+	margin: 0 auto;
+	border: 1px solid black;
 }
 .middle-container .slider-second {
 	left: 150%;
