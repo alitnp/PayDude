@@ -64,6 +64,7 @@
 .credit-cards .card-desc h1 img {
 	padding-left: 10px;
 	width: 56px;
+	transform: translateY(11px);
 }
 .credit-cards .card-desc hr {
 	margin-top: 10px;

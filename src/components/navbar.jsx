@@ -58,7 +58,7 @@ class Navbar extends Component {
 							}}>
 							<Link to="/cards">حساب بین المللی</Link>
 							<div
-								className={this.state.cardsDropdown ? "hovered":""}
+								className={this.state.cardsDropdown ? "hovered" : ""}
 								style={{ left: "-20px" }}>
 								<span>
 									<Link to="/cards/Visa">ویزا کارت</Link>
@@ -83,12 +83,15 @@ class Navbar extends Component {
 							}}>
 							خدمات
 							<div
-								className={this.state.serviceDropdown ? "hovered":""}
+								className={this.state.serviceDropdown ? "hovered" : ""}
 								style={{ left: "-50px" }}>
 								<span>
 									<Link to="/drivinglicense">گواهینامه</Link>
 								</span>
-								<span>قبض و آدرس</span>
+								<span>
+									{" "}
+									<Link to="/billaddress">قبض و آدرس</Link>
+								</span>
 							</div>
 						</li>
 					</ul>

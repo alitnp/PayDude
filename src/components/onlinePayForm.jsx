@@ -4,8 +4,10 @@ import currencyList from "../rates.json";
 import data from "../data.json";
 
 class OnlinePayForm extends Component {
-	state = { OrderDetail: data.products.OnlinePay.model };
-
+	state = { OrderDetail: data.products.OnlinePay.model, url: "" };
+	componentDidMount() {
+		
+	}
 	handleChange = async (e) => {
 		const OrderDetail = { ...this.state.OrderDetail };
 		OrderDetail[e.target.name] = e.target.value;
@@ -14,38 +16,18 @@ class OnlinePayForm extends Component {
 		const url = OrderDetail.orderLink.startsWith("http")
 			? OrderDetail.orderLink
 			: "https://" + OrderDetail.orderLink;
-		if (this.regex.test(url)) {
+		const regex = RegExp(
+			/^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/i
+		);
+		if (regex.test(url)) {
+			this.setState({
+				url: `https://api.statvoo.com/favicon/?url=${url}`,
+			});
+		} else {
+			this.state.url !== "" && this.setState({ url: "" });
 		}
 	};
-	regex = RegExp(
-		/^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/i
-	);
-	re_weburl = RegExp(
-		"^" +
-			"(?:(?:(?:https?|ftp):)?\\/\\/)" +
-			"(?:\\S+(?::\\S*)?@)?" +
-			"(?:" +
-			"(?!(?:10|127)(?:\\.\\d{1,3}){3})" +
-			"(?!(?:169\\.254|192\\.168)(?:\\.\\d{1,3}){2})" +
-			"(?!172\\.(?:1[6-9]|2\\d|3[0-1])(?:\\.\\d{1,3}){2})" +
-			"(?:[1-9]\\d?|1\\d\\d|2[01]\\d|22[0-3])" +
-			"(?:\\.(?:1?\\d{1,2}|2[0-4]\\d|25[0-5])){2}" +
-			"(?:\\.(?:[1-9]\\d?|1\\d\\d|2[0-4]\\d|25[0-4]))" +
-			"|" +
-			"(?:" +
-			"(?:" +
-			"[a-z0-9\\u00a1-\\uffff]" +
-			"[a-z0-9\\u00a1-\\uffff_-]{0,62}" +
-			")?" +
-			"[a-z0-9\\u00a1-\\uffff]\\." +
-			")+" +
-			"(?:[a-z\\u00a1-\\uffff]{2,}\\.?)" +
-			")" +
-			"(?::\\d{2,5})?" +
-			"(?:[/?#]\\S*)?" +
-			"$",
-		"i"
-	);
+
 	render() {
 		const { OrderDetail } = this.state;
 		return (
@@ -70,6 +52,7 @@ class OnlinePayForm extends Component {
 								value={OrderDetail.orderLink}
 								onChange={this.handleChange}
 							/>
+							{this.state.url && <img src={this.state.url} alt="" />}
 						</div>
 						<div>
 							<label

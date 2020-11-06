@@ -20,19 +20,23 @@ class CreditCards extends Component {
 		window.scrollTo(0, 0);
 		const selectedCard = this.props.location.pathname.slice(7);
 		(selectedCard !== "") & (selectedCard !== undefined) &&
-			this.hanleCardChange(selectedCard);
+			this.handleCardChange(selectedCard);
 	}
 	componentDidUpdate(prevProps, prevState) {
 		if (this.props.location.pathname !== prevProps.location.pathname) {
 			const selectedCard = this.props.location.pathname.slice(7);
 			(selectedCard !== "") & (selectedCard !== undefined) &&
-				this.hanleCardChange(selectedCard);
+				this.handleCardChange(selectedCard);
 		}
+		return;
 	}
-	hanleCardChange = (cardName = "Visa", cardModel = 1) => {
+	handleCardChange = (cardName = "Visa", cardModel = 1) => {
 		const selectedCard = data.products[cardName];
-		selectedCard.model = selectedCard.cardModels[cardModel];
-		this.setState({ product: selectedCard, expanded: false });
+		if ((selectedCard !== "") & (selectedCard !== undefined)) {
+			selectedCard.model = selectedCard.cardModels[cardModel];
+			this.setState({ product: selectedCard, expanded: false });
+		}
+		return;
 	};
 	render() {
 		const { nameEn, nameFa, model, specs, description } = this.state.product;
@@ -47,7 +51,7 @@ class CreditCards extends Component {
 						<div
 							className={`card-choice ${nameEn === "Visa" && "selected"}`}
 							onClick={() => {
-								this.hanleCardChange("Visa");
+								this.handleCardChange("Visa");
 							}}>
 							<span>ویزاکارت</span>
 							<img src={visacard} alt="" />
@@ -55,7 +59,7 @@ class CreditCards extends Component {
 						<div
 							className={`card-choice ${nameEn === "Master" && "selected"}`}
 							onClick={() => {
-								this.hanleCardChange("Master");
+								this.handleCardChange("Master");
 							}}>
 							<span>مسترکارت</span>
 							<img src={mastercard} alt="" />
@@ -78,7 +82,7 @@ class CreditCards extends Component {
 												<button
 													className={model.level === 1 && "active"}
 													onClick={() => {
-														this.hanleCardChange(nameEn, 1);
+														this.handleCardChange(nameEn, 1);
 													}}>
 													نقره ای
 												</button>
@@ -87,7 +91,7 @@ class CreditCards extends Component {
 												<button
 													className={model.level === 2 ? "active" : ""}
 													onClick={() => {
-														this.hanleCardChange(nameEn, 2);
+														this.handleCardChange(nameEn, 2);
 													}}>
 													طلایی
 												</button>
@@ -96,7 +100,7 @@ class CreditCards extends Component {
 												<button
 													className={model.level === 3 ? "active" : ""}
 													onClick={() => {
-														this.hanleCardChange(nameEn, 3);
+														this.handleCardChange(nameEn, 3);
 													}}>
 													پلاتینیومی
 												</button>
